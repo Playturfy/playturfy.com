@@ -1,0 +1,14 @@
+# Robots.txt for Playturfy
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://playturfy.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10
+
+# Disallow admin or private areas (if any in future)
+# Disallow: /admin/
+# Disallow: /private/
