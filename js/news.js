@@ -87,6 +87,8 @@ function openArticle(encodedArticle) {
     // Create modal
     const modal = document.createElement('div');
     modal.className = 'fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-90 backdrop-blur-sm';
+    modal.id = 'news-modal';
+    
     modal.innerHTML = `
         <div class="min-h-screen px-4 py-8">
             <div class="max-w-4xl mx-auto bg-gray-900 rounded-3xl overflow-hidden border border-lime-500/20 shadow-2xl">
@@ -95,7 +97,7 @@ function openArticle(encodedArticle) {
                     <img src="${article.image}" alt="${article.title}" 
                          class="w-full h-full object-cover"
                          onerror="this.src='https://via.placeholder.com/1200x600/1f2937/84cc16?text=Playturfy+News'">
-                    <button onclick="this.closest('.fixed').remove()" 
+                    <button id="close-modal-top" 
                             class="absolute top-4 right-4 w-12 h-12 bg-black bg-opacity-80 hover:bg-opacity-100 rounded-full flex items-center justify-center text-white transition">
                         <i class="fas fa-times text-xl"></i>
                     </button>
@@ -125,17 +127,17 @@ function openArticle(encodedArticle) {
                     
                     <!-- Share Buttons -->
                     <div class="mt-12 pt-8 border-t border-gray-800">
-                        <h3 class="text-lg font-bold mb-4">Share this article</h3>
-                        <div class="flex gap-4">
-                            <button onclick="shareOnFacebook('${encodeURIComponent(article.title)}')" 
+                        <h3 class="text-lg font-bold mb-4 text-white">Share this article</h3>
+                        <div class="flex gap-4 flex-wrap">
+                            <button id="share-facebook" 
                                     class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl transition">
                                 <i class="fab fa-facebook mr-2"></i>Facebook
                             </button>
-                            <button onclick="shareOnTwitter('${encodeURIComponent(article.title)}')" 
+                            <button id="share-twitter" 
                                     class="bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-xl transition">
                                 <i class="fab fa-twitter mr-2"></i>Twitter
                             </button>
-                            <button onclick="copyLink()" 
+                            <button id="copy-link" 
                                     class="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-xl transition">
                                 <i class="fas fa-link mr-2"></i>Copy Link
                             </button>
@@ -144,7 +146,7 @@ function openArticle(encodedArticle) {
                     
                     <!-- Close Button -->
                     <div class="mt-8 text-center">
-                        <button onclick="this.closest('.fixed').remove()" 
+                        <button id="close-modal-bottom" 
                                 class="bg-lime-500 hover:bg-lime-400 text-black px-8 py-4 rounded-xl font-semibold transition">
                             Close Article
                         </button>
@@ -157,12 +159,49 @@ function openArticle(encodedArticle) {
     document.body.appendChild(modal);
     document.body.style.overflow = 'hidden';
     
+    // Function to close modal
+    const closeModal = () => {
+        modal.remove();
+        document.body.style.overflow = '';
+        document.removeEventListener('keydown', closeOnEscape);
+    };
+    
+    // Close button event listeners
+    document.getElementById('close-modal-top').addEventListener('click', closeModal);
+    document.getElementById('close-modal-bottom').addEventListener('click', closeModal);
+    
+    // Share button event listeners
+    document.getElementById('share-facebook').addEventListener('click', () => {
+        const url = encodeURIComponent(window.location.href);
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+    });
+    
+    document.getElementById('share-twitter').addEventListener('click', () => {
+        const url = encodeURIComponent(window.location.href);
+        const text = encodeURIComponent(article.title);
+        window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+    });
+    
+    document.getElementById('copy-link').addEventListener('click', () => {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+            // Show success message
+            const btn = document.getElementById('copy-link');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check mr-2"></i>Copied!';
+            btn.classList.add('bg-green-600');
+            btn.classList.remove('bg-gray-700');
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.classList.remove('bg-green-600');
+                btn.classList.add('bg-gray-700');
+            }, 2000);
+        });
+    });
+    
     // Close on escape key
     const closeOnEscape = (e) => {
         if (e.key === 'Escape') {
-            modal.remove();
-            document.body.style.overflow = '';
-            document.removeEventListener('keydown', closeOnEscape);
+            closeModal();
         }
     };
     document.addEventListener('keydown', closeOnEscape);
@@ -170,8 +209,7 @@ function openArticle(encodedArticle) {
     // Close on background click
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
-            modal.remove();
-            document.body.style.overflow = '';
+            closeModal();
         }
     });
 }
