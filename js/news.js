@@ -1,5 +1,6 @@
 // News Page JavaScript
-const NEWS_JSON_URL = 'https://playturfy.com/news.json';
+// Use relative URL so it works on any hosting (GitHub Pages, custom domain, etc.)
+const NEWS_JSON_URL = './news.json';
 
 // Format date to readable string
 function formatDate(dateString) {
