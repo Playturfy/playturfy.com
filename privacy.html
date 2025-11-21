@@ -166,10 +166,23 @@
                     <ul class="list-disc list-inside text-gray-400 space-y-2 ml-4">
                         <li><strong class="text-white">Firebase Authentication</strong> for secure login</li>
                         <li><strong class="text-white">Firestore database</strong> (encrypted at rest and in transit)</li>
-                        <li><strong class="text-white">Firebase Storage</strong> for media uploads</li>
+                        <li><strong class="text-white">Supabase Storage</strong> for media uploads (team logos, profile pictures)</li>
                     </ul>
+                    
+                    <div class="mt-6 p-4 bg-gray-800 rounded-lg border border-lime-500/20">
+                        <h3 class="text-xl font-semibold mb-2 text-lime-500">Image Storage with Supabase</h3>
+                        <p class="text-gray-300 mb-2">User-uploaded images (team logos, profile pictures) are stored on Supabase, a secure cloud storage platform:</p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-1 ml-4">
+                            <li>Images are automatically compressed before upload to save bandwidth</li>
+                            <li>All images are stored with public URLs for fast access</li>
+                            <li>Images are organized by user ID for privacy and security</li>
+                            <li>Supabase complies with GDPR and international data protection standards</li>
+                            <li>Images can be deleted upon account deletion request</li>
+                        </ul>
+                    </div>
+                    
                     <p class="text-gray-300 mt-4">
-                        Regular security updates and audits are performed, and access is restricted through Firestore Security Rules.
+                        Regular security updates and audits are performed, and access is restricted through Firestore Security Rules and Supabase Row Level Security policies.
                     </p>
                 </section>
 
@@ -199,18 +212,18 @@
                         <li>Request a copy of your data</li>
                     </ul>
                     <p class="text-gray-300 mt-4">
-                        For account deletion or support, email <a href="mailto:turfy.sports@gmail.com" class="text-lime-500 hover:text-lime-400">turfy.sports@gmail.com</a>
+                        For account deletion or support, email 📧 <a href="mailto:turfy.sports@gmail.com" class="text-lime-500 hover:text-lime-400">turfy.sports@gmail.com</a>
                     </p>
                 </section>
 
                 <!-- Section 8 -->
                 <section>
                     <h2 class="text-3xl font-bold mb-4 text-lime-500">8. Account Deletion</h2>
-                    <p class="text-gray-300 mb-4">To delete your account, email support@playturfy.com. Upon deletion:</p>
+                    <p class="text-gray-300 mb-4">To delete your account, email turfy.sports@gmail.com. Upon deletion:</p>
                     <ul class="list-disc list-inside text-gray-400 space-y-2 ml-4">
                         <li>Your Firebase Authentication account will be removed</li>
                         <li>Your Firestore data deleted within 30 days</li>
-                        <li>Any media uploaded to Firebase Storage will be removed</li>
+                        <li>Any media uploaded to Supabase Storage will be removed</li>
                     </ul>
                 </section>
 
@@ -231,7 +244,7 @@
                     <ul class="list-disc list-inside text-gray-400 space-y-2 ml-4">
                         <li>Firebase Authentication</li>
                         <li>Firestore Database</li>
-                        <li>Firebase Storage</li>
+                        <li>Supabase Storage (for image hosting)</li>
                         <li>Firebase Analytics</li>
                         <li>Crashlytics</li>
                         <li>Google Play Services</li>
