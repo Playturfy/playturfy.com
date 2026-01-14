@@ -175,3 +175,18 @@ input:focus, textarea:focus {
     background: #84cc16;
     color: #000;
 }
+
+/* Disable Footer Hover Effects */
+footer,
+footer * {
+    pointer-events: auto !important;
+}
+
+footer:hover {
+    background-color: rgb(17 24 39) !important;
+}
+
+footer a,
+footer button {
+    cursor: pointer;
+}
