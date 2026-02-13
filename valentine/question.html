@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you be my Valentine? 💕</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="question.css">
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div id="floatingHearts"></div>
+
+    <!-- Question Card -->
+    <div id="questionCard" class="card">
+        <div class="card-content">
+            <div class="profile-image">
+                <img src="ayesha-images/home.jpg" alt="Profile">
+            </div>
+            
+            <h1 class="title">
+                Hey My Ayesha 
+                <svg class="inline-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+            </h1>
+            
+            <p class="message">
+                Every smile of yours feels like home. Every moment with you feels like magic. And today... I just have one important question.
+            </p>
+            
+            <h2 class="question">
+                Will you be my Valentine? 
+                <svg class="inline-icon pulse-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+            </h2>
+            
+            <!-- Live Counter Section -->
+            <div class="live-counter-section">
+                <h3 class="counter-title">Time Together Since 18/11/2023</h3>
+                <div class="live-counters">
+                    <div class="live-counter-item">
+                        <div class="live-number" id="days">0</div>
+                        <div class="live-label">Days</div>
+                    </div>
+                    <div class="live-counter-item">
+                        <div class="live-number" id="hours">0</div>
+                        <div class="live-label">Hours</div>
+                    </div>
+                    <div class="live-counter-item">
+                        <div class="live-number" id="minutes">0</div>
+                        <div class="live-label">Minutes</div>
+                    </div>
+                    <div class="live-counter-item">
+                        <div class="live-number" id="seconds">0</div>
+                        <div class="live-label">Seconds</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="button-container">
+            <button id="yesBtn" class="btn yes-btn">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+                Yes
+            </button>
+            <button id="noBtn" class="btn no-btn">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                </svg>
+                No
+            </button>
+        </div>
+    </div>
+
+    <!-- Congratulations Card (Hidden Initially) -->
+    <div id="congratsCard" class="card congrats-card">
+        <div class="celebration-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+            </svg>
+        </div>
+        
+        <h1 class="congrats-title">
+            CONGRATULATIONS 
+            <svg class="inline-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7 8h10M7 12h10M7 16h10M3 4h18v16H3z"/>
+            </svg>
+        </h1>
+        
+        <p class="congrats-message">
+            You are officially, proudly, and forever
+        </p>
+        
+        <h2 class="valentine-title">
+            <svg class="inline-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            The Valentine of
+            <svg class="inline-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+        </h2>
+        <h2 class="name">
+            Your Love 
+            <svg class="inline-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+        </h2>
+        
+        <p class="final-message">
+            I choose you today. I'll choose you tomorrow.<br>
+            And I'll keep choosing you — always.
+        </p>
+        
+        <p class="tagline">
+            Happy Valentine's Day 
+            <svg class="inline-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/>
+            </svg>
+        </p>
+        
+        <!-- Memory Gallery Section -->
+        <div class="memory-gallery-section">
+            <h3 class="gallery-title">
+                Our Beautiful Memories 
+                <svg class="inline-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                </svg>
+            </h3>
+            <p class="gallery-subtitle">Every moment with you is a treasure</p>
+            
+            <div class="memory-grid">
+                <div class="memory-item large">
+                    <img src="ayesha-images/WhatsApp%20Image%202026-02-13%20at%208.16.18%20PM.jpeg" alt="Beautiful Memory 1" loading="lazy">
+                </div>
+                <div class="memory-item small">
+                    <img src="ayesha-images/WhatsApp%20Image%202026-02-13%20at%208.16.19%20PM%20(1).jpeg" alt="Beautiful Memory 2" loading="lazy">
+                </div>
+                <div class="memory-item landscape">
+                    <img src="ayesha-images/WhatsApp%20Image%202026-02-13%20at%208.16.19%20PM.jpeg" alt="Beautiful Memory 3" loading="lazy">
+                </div>
+                <div class="memory-item medium">
+                    <img src="ayesha-images/WhatsApp%20Image%202026-02-13%20at%208.16.20%20PM%20(1).jpeg" alt="Beautiful Memory 4" loading="lazy">
+                </div>
+                <div class="memory-item medium">
+                    <img src="ayesha-images/WhatsApp%20Image%202026-02-13%20at%208.16.20%20PM.jpeg" alt="Beautiful Memory 5" loading="lazy">
+                </div>
+                <div class="memory-item landscape">
+                    <img src="ayesha-images/WhatsApp%20Image%202026-02-13%20at%208.16.21%20PM%20(1).jpeg" alt="Beautiful Memory 6" loading="lazy">
+                </div>
+                <div class="memory-item small">
+                    <img src="ayesha-images/WhatsApp%20Image%202026-02-13%20at%208.16.21%20PM.jpeg" alt="Beautiful Memory 7" loading="lazy">
+                </div>
+                <div class="memory-item small">
+                    <img src="ayesha-images/WhatsApp%20Image%202026-02-13%20at%208.16.22%20PM.jpeg" alt="Beautiful Memory 8" loading="lazy">
+                </div>
+                <div class="memory-item medium">
+                    <img src="ayesha-images/WhatsApp%20Image%202026-02-13%20at%208.16.34%20PM.jpeg" alt="Beautiful Memory 9" loading="lazy">
+                </div>
+                <div class="memory-item small">
+                    <img src="ayesha-images/WhatsApp%20Image%202026-02-13%20at%208.16.44%20PM%20(1).jpeg" alt="Beautiful Memory 10" loading="lazy">
+                </div>
+                <div class="memory-item small">
+                    <img src="ayesha-images/WhatsApp%20Image%202026-02-13%20at%208.16.44%20PM.jpeg" alt="Beautiful Memory 11" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Container -->
+    <div id="confettiContainer"></div>
+
+    <script src="question.js"></script>
+</body>
+</html>

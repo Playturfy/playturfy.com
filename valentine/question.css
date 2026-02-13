@@ -1,0 +1,1051 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff1744 0%, #ff6b9d 50%, #ff8fab 100%);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Floating Hearts */
+#floatingHearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-heart {
+    position: absolute;
+    opacity: 0.6;
+    animation: floatUp 15s linear infinite;
+}
+
+.floating-heart svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 5px currentColor);
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) rotate(0deg) scale(0.8);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg) scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* Card Styles */
+.card {
+    background: rgba(255, 182, 193, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 40px;
+    padding: 40px 35px 30px 35px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+    z-index: 10;
+    animation: cardAppear 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    max-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+}
+
+.card-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 5px;
+    margin-right: -5px;
+    min-height: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.card-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.card-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.card-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.card-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Profile Image */
+.profile-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #ff6b9d, #ff1744);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(255, 23, 68, 0.4);
+    animation: pulse 2s ease-in-out infinite;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-image svg {
+    width: 60px;
+    height: 60px;
+    color: white;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 10px 30px rgba(255, 23, 68, 0.4);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(255, 23, 68, 0.6);
+    }
+}
+
+/* Text Styles */
+.title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.inline-icon {
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #ff1744;
+    filter: drop-shadow(0 2px 5px rgba(255, 23, 68, 0.5));
+}
+
+.pulse-icon {
+    animation: iconPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.message {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.question {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 25px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    animation: questionBounce 1s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+@keyframes questionBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    min-height: 60px;
+    flex-shrink: 0;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 182, 193, 0.95);
+    position: sticky;
+    bottom: 0;
+    margin-left: -35px;
+    margin-right: -35px;
+    margin-bottom: -30px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 30px;
+    border-radius: 0 0 37px 37px;
+    z-index: 100;
+}
+
+/* Button Styles */
+.btn {
+    padding: 12px 35px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: 'Fredoka', sans-serif;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.yes-btn {
+    background: linear-gradient(135deg, #ff1744, #c41c3b);
+    color: white;
+    animation: yesGrow 2s ease-in-out infinite;
+    z-index: 100;
+}
+
+@keyframes yesGrow {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.yes-btn:hover {
+    transform: scale(1.15);
+    box-shadow: 0 12px 30px rgba(255, 23, 68, 0.5);
+}
+
+.yes-btn:active {
+    transform: scale(1.05);
+}
+
+.no-btn {
+    background: rgba(100, 100, 100, 0.8);
+    color: white;
+    transition: all 0.3s ease;
+    z-index: 99;
+}
+
+.no-btn.moving {
+    z-index: 99999 !important;
+    position: fixed !important;
+}
+
+.no-btn:hover {
+    background: rgba(80, 80, 80, 0.9);
+}
+
+/* Live Counter Section */
+.live-counter-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.counter-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.live-counters {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.live-counter-item {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 15px 8px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.live-counter-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.live-number {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: white;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 5px;
+    animation: numberPulse 1s ease-in-out infinite;
+}
+
+@keyframes numberPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.live-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* Congratulations Card */
+.congrats-card {
+    display: none;
+    background: rgba(255, 182, 193, 0.98);
+    animation: congratsAppear 1s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 600px;
+    padding: 50px 40px;
+    overflow-y: auto;
+    max-height: 95vh;
+}
+
+.congrats-card.show {
+    display: block;
+}
+
+@keyframes congratsAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(-10deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.celebration-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    animation: starSpin 2s ease-in-out infinite;
+}
+
+.celebration-icon svg {
+    width: 100%;
+    height: 100%;
+    color: #ffd700;
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8));
+}
+
+@keyframes starSpin {
+    0%, 100% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.2);
+    }
+}
+
+.congrats-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    word-wrap: break-word;
+}
+
+.congrats-message {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 15px;
+}
+
+.valentine-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    word-wrap: break-word;
+}
+
+.name {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ff1744;
+    margin-bottom: 30px;
+    text-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
+    animation: nameGlow 2s ease-in-out infinite;
+    word-wrap: break-word;
+}
+
+@keyframes nameGlow {
+    0%, 100% {
+        text-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        text-shadow: 0 4px 25px rgba(255, 255, 255, 0.9);
+    }
+}
+
+.final-message {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.tagline {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Memory Gallery Section */
+.memory-gallery-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.gallery-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.gallery-subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.memory-item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    animation: memoryFadeIn 0.6s ease forwards;
+    opacity: 0;
+}
+
+/* Different sizes for variety - Portrait orientation */
+.memory-item.large {
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+.memory-item.medium {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.memory-item.small {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.memory-item.landscape {
+    grid-column: span 3;
+    grid-row: span 1;
+}
+
+.memory-item:nth-child(1) { animation-delay: 0.1s; }
+.memory-item:nth-child(2) { animation-delay: 0.2s; }
+.memory-item:nth-child(3) { animation-delay: 0.3s; }
+.memory-item:nth-child(4) { animation-delay: 0.4s; }
+.memory-item:nth-child(5) { animation-delay: 0.5s; }
+.memory-item:nth-child(6) { animation-delay: 0.6s; }
+.memory-item:nth-child(7) { animation-delay: 0.7s; }
+.memory-item:nth-child(8) { animation-delay: 0.8s; }
+
+@keyframes memoryFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.memory-item:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.memory-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 180px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.memory-item.large .memory-placeholder {
+    min-height: 450px;
+}
+
+.memory-item.medium .memory-placeholder {
+    min-height: 280px;
+}
+
+.memory-item.small .memory-placeholder {
+    min-height: 130px;
+}
+
+.memory-item.landscape .memory-placeholder {
+    min-height: 180px;
+}
+
+.memory-placeholder svg {
+    width: 50px;
+    height: 50px;
+    color: rgba(255, 255, 255, 0.7);
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+}
+
+.memory-placeholder span {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* For actual images - you can replace placeholders with this */
+.memory-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Confetti */
+#confettiContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    animation: confettiFall 3s ease-out forwards;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .card {
+        padding: 30px 25px 25px 25px;
+        max-width: 92%;
+        border-radius: 30px;
+        max-height: 90vh;
+    }
+
+    .card-content {
+        padding-right: 3px;
+        margin-right: -3px;
+    }
+
+    .button-container {
+        margin-left: -25px;
+        margin-right: -25px;
+        margin-bottom: -25px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 25px;
+        padding-top: 15px;
+        margin-top: 15px;
+        border-radius: 0 0 27px 27px;
+        gap: 20px;
+    }
+
+    .title {
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+    }
+
+    .message {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+
+    .question {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        padding: 10px 28px;
+        font-size: 1.05rem;
+    }
+
+    .congrats-title {
+        font-size: 2rem;
+        letter-spacing: 0.5px;
+    }
+
+    .name {
+        font-size: 1.8rem;
+    }
+
+    .valentine-title {
+        font-size: 1.4rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .final-message {
+        font-size: 1rem;
+    }
+
+    .memory-gallery-section {
+        margin-top: 30px;
+        padding-top: 25px;
+    }
+
+    .gallery-title {
+        font-size: 1.5rem;
+    }
+
+    .gallery-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+
+    .memory-grid {
+        gap: 12px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .memory-item.large {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+
+    .memory-item.medium {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+
+    .memory-item.small {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .memory-placeholder {
+        min-height: 150px;
+    }
+
+    .memory-item.large .memory-placeholder {
+        min-height: 280px;
+    }
+
+    .memory-item.medium .memory-placeholder {
+        min-height: 280px;
+    }
+
+    .memory-item.small .memory-placeholder {
+        min-height: 130px;
+    }
+
+    .memory-item.landscape .memory-placeholder {
+        min-height: 150px;
+    }
+
+    .memory-placeholder svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .memory-placeholder span {
+        font-size: 0.8rem;
+    }
+
+    .profile-image {
+        width: 85px;
+        height: 85px;
+        margin-bottom: 15px;
+    }
+
+    .profile-image svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .live-counters {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .live-counter-item {
+        padding: 12px 6px;
+        border-radius: 12px;
+    }
+
+    .live-number {
+        font-size: 1.5rem;
+        margin-bottom: 4px;
+    }
+
+    .live-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.2px;
+    }
+
+    .counter-title {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+
+    .inline-icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .btn-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .live-counter-section {
+        margin-top: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 25px 20px 20px 20px;
+        border-radius: 25px;
+        max-height: 92vh;
+    }
+
+    .card-content {
+        padding-right: 2px;
+        margin-right: -2px;
+    }
+
+    .button-container {
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-bottom: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-top: 12px;
+        margin-top: 12px;
+        border-radius: 0 0 22px 22px;
+        gap: 15px;
+    }
+
+    .title {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    .message {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+
+    .question {
+        font-size: 1.15rem;
+        margin-bottom: 18px;
+    }
+
+    .btn {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+
+    .congrats-title {
+        font-size: 1.5rem;
+        letter-spacing: 0px;
+    }
+
+    .valentine-title {
+        font-size: 1.1rem;
+    }
+
+    .name {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .final-message {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    .congrats-card {
+        padding: 30px 20px;
+    }
+
+    .memory-gallery-section {
+        margin-top: 25px;
+        padding-top: 20px;
+    }
+
+    .gallery-title {
+        font-size: 1.3rem;
+    }
+
+    .gallery-subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+
+    .memory-grid {
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .memory-item {
+        border-radius: 15px;
+    }
+
+    .memory-item.large {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+
+    .memory-item.medium {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+
+    .memory-item.small {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .memory-item.landscape {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .memory-placeholder {
+        min-height: 140px;
+    }
+
+    .memory-item.large .memory-placeholder {
+        min-height: 260px;
+    }
+
+    .memory-item.medium .memory-placeholder {
+        min-height: 260px;
+    }
+
+    .memory-item.small .memory-placeholder {
+        min-height: 120px;
+    }
+
+    .memory-item.landscape .memory-placeholder {
+        min-height: 140px;
+    }
+
+    .memory-item.landscape .memory-placeholder {
+        min-height: 140px;
+    }
+
+    .memory-placeholder svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .memory-placeholder span {
+        font-size: 0.75rem;
+    }
+
+    .profile-image {
+        width: 75px;
+        height: 75px;
+        margin-bottom: 12px;
+    }
+
+    .profile-image svg {
+        width: 45px;
+        height: 45px;
+    }
+
+    .live-counter-item {
+        padding: 10px 5px;
+    }
+
+    .live-number {
+        font-size: 1.3rem;
+        margin-bottom: 3px;
+    }
+
+    .live-label {
+        font-size: 0.6rem;
+    }
+
+    .counter-title {
+        font-size: 0.85rem;
+        margin-bottom: 10px;
+    }
+
+    .inline-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .btn-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .live-counter-section {
+        margin-top: 12px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .celebration-icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 15px;
+    }
+}
