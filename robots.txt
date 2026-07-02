@@ -1,14 +1,22 @@
 # Robots.txt for Playturfy
+# Updated: 2026-07-02
 
 User-agent: *
 Allow: /
 
+# Allow CSS and JS for better crawling
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+Allow: /images/
+
+# Disallow admin or private areas (future-proofing)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+
 # Sitemap location
 Sitemap: https://playturfy.com/sitemap.xml
+Sitemap: https://www.playturfy.com/sitemap.xml
 
-# Crawl-delay
-Crawl-delay: 10
-
-# Disallow admin or private areas (if any in future)
-# Disallow: /admin/
-# Disallow: /private/
+# No crawl-delay for static site (faster indexing)

@@ -1,0 +1,23 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#000000"/>
+  
+  <!-- Brand Color Gradient -->
+  <defs>
+    <radialGradient id="brandGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#BFFF00;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#BFFF00;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  <circle cx="600" cy="315" r="400" fill="url(#brandGlow)"/>
+  
+  <!-- Content -->
+  <text x="600" y="220" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#BFFF00" text-anchor="middle">Playturfy</text>
+  <text x="600" y="300" font-family="Arial, sans-serif" font-size="36" fill="#FFFFFF" text-anchor="middle">Manage Matches. Manage Tournaments.</text>
+  <text x="600" y="350" font-family="Arial, sans-serif" font-size="36" fill="#FFFFFF" text-anchor="middle">Manage Stats.</text>
+  <text x="600" y="430" font-family="Arial, sans-serif" font-size="28" fill="#CCCCCC" text-anchor="middle">OBS Overlay | Live Stats | Real-time Broadcasting</text>
+  
+  <!-- Footer -->
+  <rect x="400" y="520" width="400" height="3" fill="#BFFF00"/>
+  <text x="600" y="560" font-family="Arial, sans-serif" font-size="22" fill="#999999" text-anchor="middle">Download Now - playturfy.com</text>
+</svg>
