@@ -6,9 +6,15 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px; /* Explicit base font size for mobile accessibility */
+}
+
 body {
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     overflow-x: hidden;
+    font-size: 1rem; /* 16px base */
+    line-height: 1.6;
 }
 
 /* Smooth Scrolling */
@@ -96,11 +102,15 @@ input:focus, textarea:focus {
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .faq-item.active .faq-answer {
-    max-height: 500px;
+    max-height: 1000px;
+    padding-top: 1.5rem;
+    padding-bottom: 0;
 }
 
 /* Responsive Typography */
@@ -170,4 +180,19 @@ input:focus, textarea:focus {
 ::-moz-selection {
     background: #84cc16;
     color: #000;
+}
+
+/* Disable Footer Hover Effects */
+footer,
+footer * {
+    pointer-events: auto !important;
+}
+
+footer:hover {
+    background-color: rgb(17 24 39) !important;
+}
+
+footer a,
+footer button {
+    cursor: pointer;
 }

@@ -1,0 +1,19 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="256" fill="#000000"/>
+  
+  <!-- Brand Color Ring -->
+  <circle cx="256" cy="256" r="220" fill="none" stroke="#BFFF00" stroke-width="12"/>
+  
+  <!-- Football/Soccer Ball Design -->
+  <circle cx="256" cy="256" r="180" fill="#1a1a1a" stroke="#BFFF00" stroke-width="8"/>
+  
+  <!-- Pentagon Pattern -->
+  <polygon points="256,120 300,160 280,220 232,220 212,160" fill="#BFFF00"/>
+  <polygon points="180,200 220,180 256,210 240,260 190,250" fill="#BFFF00" opacity="0.8"/>
+  <polygon points="332,200 322,250 272,260 256,210 292,180" fill="#BFFF00" opacity="0.8"/>
+  <polygon points="220,310 256,290 292,310 280,360 232,360" fill="#BFFF00" opacity="0.8"/>
+  
+  <!-- P Letter (for Playturfy) -->
+  <text x="256" y="360" font-family="Arial, sans-serif" font-size="140" font-weight="bold" fill="#FFFFFF" text-anchor="middle" opacity="0.3">P</text>
+</svg>

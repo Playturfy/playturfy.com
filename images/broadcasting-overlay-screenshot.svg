@@ -1,0 +1,40 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0a0a0a"/>
+  
+  <!-- Simulated Broadcasting Overlay -->
+  <defs>
+    <linearGradient id="overlayBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:0.95" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.95" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Scoreboard Background -->
+  <rect x="100" y="100" width="1000" height="180" rx="20" fill="url(#overlayBg)" stroke="#BFFF00" stroke-width="4"/>
+  
+  <!-- Team A -->
+  <circle cx="200" cy="190" r="50" fill="#333333" stroke="#BFFF00" stroke-width="3"/>
+  <text x="200" y="205" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#BFFF00" text-anchor="middle">A</text>
+  <text x="280" y="205" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#FFFFFF">Team Alpha</text>
+  
+  <!-- Score -->
+  <rect x="520" y="150" width="160" height="80" rx="10" fill="#BFFF00"/>
+  <text x="600" y="210" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="#000000" text-anchor="middle">2 - 1</text>
+  
+  <!-- Team B -->
+  <circle cx="1000" cy="190" r="50" fill="#333333" stroke="#BFFF00" stroke-width="3"/>
+  <text x="1000" y="205" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#BFFF00" text-anchor="middle">B</text>
+  <text x="920" y="205" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#FFFFFF" text-anchor="end">Team Beta</text>
+  
+  <!-- Timer -->
+  <rect x="500" y="320" width="200" height="80" rx="15" fill="#1a1a1a" stroke="#BFFF00" stroke-width="3"/>
+  <text x="600" y="372" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#BFFF00" text-anchor="middle">45:00</text>
+  
+  <!-- Match Phase -->
+  <text x="600" y="440" font-family="Arial, sans-serif" font-size="32" fill="#FFFFFF" text-anchor="middle">1ST HALF</text>
+  
+  <!-- Labels -->
+  <text x="600" y="520" font-family="Arial, sans-serif" font-size="28" fill="#999999" text-anchor="middle">Professional OBS Broadcasting Overlay</text>
+  <text x="600" y="570" font-family="Arial, sans-serif" font-size="24" fill="#BFFF00" text-anchor="middle">Real-time Updates - Smart Timer - Live Scoreboard</text>
+</svg>
