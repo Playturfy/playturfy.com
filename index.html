@@ -11,6 +11,47 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-L299SZQPMC');
+      
+      // Track Download Button Clicks (Primary Conversion)
+      function trackDownload(location) {
+        gtag('event', 'download_click', {
+          'event_category': 'engagement',
+          'event_label': location,
+          'value': 1
+        });
+      }
+      
+      // Track Navigation Clicks (Engagement)
+      function trackNavigation(destination) {
+        gtag('event', 'navigation_click', {
+          'event_category': 'engagement',
+          'event_label': destination
+        });
+      }
+      
+      // Track Feature Exploration (Engagement)
+      function trackFeatureExplore() {
+        gtag('event', 'explore_features', {
+          'event_category': 'engagement',
+          'event_label': 'hero_cta'
+        });
+      }
+      
+      // Track News Article Clicks (Content Engagement)
+      function trackNewsClick() {
+        gtag('event', 'news_click', {
+          'event_category': 'content',
+          'event_label': 'homepage_news_cta'
+        });
+      }
+      
+      // Track Social Media Clicks (Social Engagement)
+      function trackSocialClick(platform) {
+        gtag('event', 'social_click', {
+          'event_category': 'social',
+          'event_label': platform
+        });
+      }
     </script>
     
     <meta charset="UTF-8">
@@ -231,15 +272,15 @@
             </a>
             
             <div class="hidden md:flex space-x-8 items-center">
-                <a href="#home" class="hover:text-lime-500 transition">Home</a>
-                <a href="#features" class="hover:text-lime-500 transition">Features</a>
-                <a href="news.html" class="hover:text-lime-500 transition">News</a>
-                <a href="#screenshots" class="hover:text-lime-500 transition">Screenshots</a>
-                <a href="#download" class="hover:text-lime-500 transition">Download</a>
-                <a href="#contact" class="hover:text-lime-500 transition">Contact</a>
-                <a href="privacy.html" class="hover:text-lime-500 transition">Privacy</a>
-                <a href="terms.html" class="hover:text-lime-500 transition">Terms</a>
-                <a href="#download" class="bg-lime-500 text-black px-6 py-2 rounded-xl font-semibold hover:bg-lime-400 transition">Download App</a>
+                <a href="#home" onclick="trackNavigation('home')" class="hover:text-lime-500 transition">Home</a>
+                <a href="#features" onclick="trackNavigation('features')" class="hover:text-lime-500 transition">Features</a>
+                <a href="news.html" onclick="trackNavigation('news')" class="hover:text-lime-500 transition">News</a>
+                <a href="#screenshots" onclick="trackNavigation('screenshots')" class="hover:text-lime-500 transition">Screenshots</a>
+                <a href="#download" onclick="trackNavigation('download')" class="hover:text-lime-500 transition">Download</a>
+                <a href="#contact" onclick="trackNavigation('contact')" class="hover:text-lime-500 transition">Contact</a>
+                <a href="privacy.html" onclick="trackNavigation('privacy')" class="hover:text-lime-500 transition">Privacy</a>
+                <a href="terms.html" onclick="trackNavigation('terms')" class="hover:text-lime-500 transition">Terms</a>
+                <a href="#download" onclick="trackDownload('header')" class="bg-lime-500 text-black px-6 py-2 rounded-xl font-semibold hover:bg-lime-400 transition">Download App</a>
             </div>
             
             <button id="mobile-menu-btn" class="md:hidden text-lime-500">
@@ -281,12 +322,19 @@
                     Turfy - The complete app to manage football matches, manage local tournaments, and manage football stats. Perfect for street football, local clubs, academies, and community leagues.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer" target="_blank" rel="noopener noreferrer" class="bg-lime-500 text-black px-8 py-4 rounded-xl font-semibold hover:bg-lime-400 transition flex items-center justify-center space-x-2">
+                    <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer" target="_blank" rel="noopener noreferrer" onclick="trackDownload('hero_primary')" class="bg-lime-500 text-black px-8 py-4 rounded-xl font-semibold hover:bg-lime-400 transition flex items-center justify-center space-x-2">
                         <i class="fab fa-google-play"></i>
                         <span>Download on Play Store</span>
                     </a>
-                    <a href="#features" class="border-2 border-lime-500 text-lime-500 px-8 py-4 rounded-xl font-semibold hover:bg-lime-500 hover:text-black transition text-center">
+                    <a href="#features" onclick="trackFeatureExplore()" class="border-2 border-lime-500 text-lime-500 px-8 py-4 rounded-xl font-semibold hover:bg-lime-500 hover:text-black transition text-center">
                         Explore Features
+                    </a>
+                </div>
+                <div class="pt-4">
+                    <a href="news.html" onclick="trackNewsClick()" class="inline-flex items-center text-lime-500 hover:text-lime-400 transition group">
+                        <i class="fas fa-newspaper mr-2"></i>
+                        <span class="font-semibold">Read Latest Football News & Updates</span>
+                        <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition"></i>
                     </a>
                 </div>
             </div>
@@ -1052,13 +1100,13 @@
                     </a>
                     
                     <div class="flex space-x-4 mt-4">
-                        <a href="https://www.facebook.com/share/1SPFLM9UzT/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-lime-500 hover:text-black transition">
+                        <a href="https://www.facebook.com/share/1SPFLM9UzT/" target="_blank" rel="noopener noreferrer" onclick="trackSocialClick('facebook')" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-lime-500 hover:text-black transition">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="https://www.instagram.com/playturfy/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-lime-500 hover:text-black transition">
+                        <a href="https://www.instagram.com/playturfy/" target="_blank" rel="noopener noreferrer" onclick="trackSocialClick('instagram')" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-lime-500 hover:text-black transition">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://x.com/PlayTurfy" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-lime-500 hover:text-black transition">
+                        <a href="https://x.com/PlayTurfy" target="_blank" rel="noopener noreferrer" onclick="trackSocialClick('twitter')" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-lime-500 hover:text-black transition">
                             <i class="fab fa-x-twitter"></i>
                         </a>
                     </div>
