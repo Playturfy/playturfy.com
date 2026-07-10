@@ -1,7 +1,7 @@
 {
-  "name": "Playturfy - Football Scoring & Tournament Management",
-  "short_name": "Playturfy",
-  "description": "Complete football scoring and tournament management app. Track goals, cards, substitutions, manage tournaments, and generate match summaries.",
+  "name": "Turfy - Football Match & Tournament Tracker",
+  "short_name": "Turfy",
+  "description": "Free app to track football matches, run tournaments, and manage your team. Live scoring, player stats, and instant match reports. No ads.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
@@ -16,12 +16,6 @@
     },
     {
       "src": "assets/Favicon of turfy/web-app-manifest-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "images/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
