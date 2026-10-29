@@ -1,0 +1,7 @@
+# Test and scratch artifacts
+scratch/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -15,8 +15,8 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /.git/
 
-# Sitemap location
+# Sitemap & AI documentation
 Sitemap: https://playturfy.com/sitemap.xml
-Sitemap: https://www.playturfy.com/sitemap.xml
+# LLMs: https://playturfy.com/llms.txt
 
 # No crawl-delay for static site (faster indexing)

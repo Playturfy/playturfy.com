@@ -1,145 +1,156 @@
-// Playturfy Website JavaScript
+/**
+ * Turfy - Main JavaScript
+ * Lightweight, zero dependencies, accessible interactions
+ */
 
-// Mobile Menu Toggle
-const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
+(function () {
+  'use strict';
 
-mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-    const icon = mobileMenuBtn.querySelector('i');
-    icon.classList.toggle('fa-bars');
-    icon.classList.toggle('fa-times');
-});
-
-// Close mobile menu when clicking on a link
-const mobileLinks = mobileMenu.querySelectorAll('a');
-mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        const icon = mobileMenuBtn.querySelector('i');
-        icon.classList.add('fa-bars');
-        icon.classList.remove('fa-times');
-    });
-});
-
-// Header Scroll Effect
-const header = document.getElementById('header');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
+  // 1. Sticky Header scroll effect
+  const header = document.getElementById('header');
+  if (header) {
+    const handleScroll = () => {
+      if (window.scrollY > 40) {
         header.classList.add('scrolled');
-    } else {
+      } else {
         header.classList.remove('scrolled');
-    }
-});
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+  }
 
-// FAQ Accordion
-const faqItems = document.querySelectorAll('.faq-item');
-faqItems.forEach(item => {
-    const question = item.querySelector('.faq-question');
-    question.addEventListener('click', () => {
-        // Close all other items
-        faqItems.forEach(otherItem => {
-            if (otherItem !== item) {
-                otherItem.classList.remove('active');
-            }
-        });
-        // Toggle current item
-        item.classList.toggle('active');
+  // 2. Mobile Menu Drawer
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileDrawer = document.getElementById('mobile-drawer');
+  if (mobileMenuBtn && mobileDrawer) {
+    mobileMenuBtn.addEventListener('click', () => {
+      const isOpen = mobileDrawer.classList.toggle('open');
+      mobileMenuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
-});
 
-// Smooth Scroll for Navigation Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    mobileDrawer.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileDrawer.classList.remove('open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // 3. Smooth scrolling for hash links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href !== '#' && href !== '#download') {
-            e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+      const href = this.getAttribute('href');
+      if (href && href.length > 1) {
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
+      }
     });
-});
+  });
 
-// Contact Form Submission
-const contactForm = document.getElementById('contact-form');
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    const formData = new FormData(contactForm);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
-    
-    // Here you would typically send this to a backend
-    // For now, we'll just show an alert
-    alert(`Thank you ${name}! We've received your message and will get back to you at ${email} soon.`);
-    
-    // Reset form
-    contactForm.reset();
-});
+  // 4. Role Tabs (Player / Captain / Organizer)
+  const roleTabButtons = document.querySelectorAll('.role-tab-btn');
+  const rolePanels = document.querySelectorAll('.role-panel');
+  if (roleTabButtons.length && rolePanels.length) {
+    roleTabButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const targetRole = btn.getAttribute('data-role');
+        roleTabButtons.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
 
-// Intersection Observer for Animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+        rolePanels.forEach((panel) => {
+          if (panel.id === `role-${targetRole}`) {
+            panel.classList.add('active');
+          } else {
+            panel.classList.remove('active');
+          }
+        });
+      });
     });
-}, observerOptions);
+  }
 
-// Observe all sections
-document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(30px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(section);
-});
+  // 5. FAQ Accordion (accessible with aria-expanded)
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach((item) => {
+    const btn = item.querySelector('.faq-question');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      // Close all items
+      faqItems.forEach((other) => {
+        other.classList.remove('open');
+        const otherBtn = other.querySelector('.faq-question');
+        if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+      });
+      // Toggle current
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
 
-// Screenshot Slider Auto Scroll
-const screenshotSlider = document.getElementById('screenshot-slider');
-let isScrolling = false;
+  // 6. iPhone Waitlist Modal
+  const waitlistTriggers = document.querySelectorAll('[data-open-waitlist]');
+  const waitlistModal = document.getElementById('waitlist-modal');
+  const waitlistClose = document.getElementById('waitlist-close');
 
-screenshotSlider.addEventListener('mouseenter', () => {
-    isScrolling = false;
-});
-
-screenshotSlider.addEventListener('mouseleave', () => {
-    isScrolling = true;
-});
-
-// Auto scroll screenshots
-setInterval(() => {
-    if (isScrolling && screenshotSlider) {
-        screenshotSlider.scrollLeft += 1;
-        if (screenshotSlider.scrollLeft >= screenshotSlider.scrollWidth - screenshotSlider.clientWidth) {
-            screenshotSlider.scrollLeft = 0;
-        }
+  const openWaitlist = () => {
+    if (waitlistModal) {
+      waitlistModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      const input = waitlistModal.querySelector('input[type="email"]');
+      if (input) input.focus();
     }
-}, 30);
+  };
 
-// Add hover effect to feature cards
-const featureCards = document.querySelectorAll('.bg-gray-900');
-featureCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-    });
-});
+  const closeWaitlist = () => {
+    if (waitlistModal) {
+      waitlistModal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  };
 
-// Console welcome message
-console.log('%c⚽ Welcome to Playturfy! ', 'background: #84cc16; color: #000; font-size: 20px; padding: 10px;');
-console.log('%cYour Football. Your Stats. Your Game.', 'color: #84cc16; font-size: 14px;');
+  waitlistTriggers.forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      openWaitlist();
+    });
+  });
+
+  if (waitlistClose) {
+    waitlistClose.addEventListener('click', closeWaitlist);
+  }
+
+  if (waitlistModal) {
+    waitlistModal.addEventListener('click', (e) => {
+      if (e.target === waitlistModal) closeWaitlist();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && waitlistModal && waitlistModal.classList.contains('open')) {
+      closeWaitlist();
+    }
+  });
+
+  // 7. Auto-detect iOS to offer waitlist CTA
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  if (isIOS) {
+    const stickyDownload = document.getElementById('sticky-download-btn');
+    if (stickyDownload) {
+      stickyDownload.textContent = 'iPhone Waitlist';
+      stickyDownload.href = '#';
+      stickyDownload.addEventListener('click', (e) => {
+        e.preventDefault();
+        openWaitlist();
+      });
+    }
+  }
+
+  // 8. Contact Form - submits to formsubmit.co naturally, no e.preventDefault() blocking it
+  // (We do not interfere so messages are safely delivered to turfy.sports@gmail.com)
+})();

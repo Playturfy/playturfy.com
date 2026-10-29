@@ -1,1073 +1,866 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L2995ZQPNC"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-L2995ZQPNC');
-    </script>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    
-    <!-- Primary Meta Tags -->
-    <title>Playturfy - Football Broadcasting App | Stream to OBS</title>
-    <meta name="title" content="Playturfy - Football Broadcasting App | Stream to OBS">
-    <meta name="description" content="Stream football matches with professional OBS overlay. Real-time scoreboard, smart timer & live stats. Free broadcasting app for tournaments.">
-    <meta name="keywords" content="playturfy, football broadcasting app, OBS overlay, stream football matches, tournament management, live scoreboard, match tracker, football stats app, turfy app">
-    <meta name="author" content="Playturfy">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="7 days">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://playturfy.com/">
-    <meta property="og:title" content="Playturfy - Football Broadcasting App | Stream to OBS & Streamlabs">
-    <meta property="og:description" content="Stream football matches live with professional OBS overlay! Broadcast tournaments with real-time scoreboard, smart timer, and extra time indicator. Free football streaming app for local matches.">
-    <meta property="og:image" content="https://playturfy.com/images/og-image.svg">
-    <meta property="og:image:alt" content="Playturfy Football Broadcasting App - Stream to OBS with Live Scoreboard">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:type" content="image/svg+xml">
-    <meta property="og:site_name" content="Playturfy">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://playturfy.com/">
-    <meta name="twitter:title" content="Playturfy - Football Broadcasting App | Stream to OBS">
-    <meta name="twitter:description" content="Stream football matches with professional OBS overlay! Real-time scoreboard, smart timer & live stats. Free broadcasting app for tournaments.">
-    <meta name="twitter:image" content="https://playturfy.com/images/twitter-card.svg">
-    <meta name="twitter:image:alt" content="Playturfy - Manage Matches, Tournaments & Stats">
-    <meta name="twitter:site" content="@PlayTurfy">
-    <meta name="twitter:creator" content="@PlayTurfy">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://playturfy.com/">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/svg+xml" href="assets/Favicon of turfy/favicon.svg">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/Favicon of turfy/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/Favicon of turfy/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/Favicon of turfy/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/Favicon of turfy/favicon-96x96.png">
-    <link rel="manifest" href="assets/Favicon of turfy/site.webmanifest">
-    
-    <!-- Theme Color - Brand Color #BFFF00 -->
-    <meta name="theme-color" content="#BFFF00">
-    <meta name="msapplication-TileColor" content="#000000">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=2.2">
-    
-    <!-- Structured Data / Schema.org -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MobileApplication",
-      "name": "Playturfy - Football Broadcasting & Tournament Management App",
-      "alternateName": "Turfy",
-      "description": "Stream football matches live with professional OBS overlay! Broadcast tournaments with real-time scoreboard, smart timer, and extra time indicator. Complete football broadcasting app for OBS Studio, Streamlabs, XSplit, vMix, and Wirecast. Manage matches, tournaments, and football stats with live streaming capabilities. Perfect for local football clubs, academies, and community tournaments.",
-      "applicationCategory": "SportsApplication",
-      "operatingSystem": "Android",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "1250"
-      },
-      "author": {
-        "@type": "Organization",
-        "name": "Playturfy"
-      },
-      "featureList": [
-        "Live Broadcasting to OBS Studio, Streamlabs, XSplit, vMix, Wirecast",
-        "Professional Scoreboard Overlay with Real-Time Updates",
-        "Smart Timer with Half-Time Pause and Extra Time Indicator",
-        "One-Click Broadcast Link Generation for OBS",
-        "Admin-Only Broadcasting Controls for Tournament Organizers",
-        "Real-Time Match Streaming with Professional Overlay",
-        "Football Match Broadcasting Software Integration",
-        "Live Tournament Streaming Overlay",
-        "Team Statistics Dashboard with comprehensive analytics",
-        "Professional PDF Reports Generator",
-        "Live Match Tracking and Score Updates",
-        "Tournament Management (Round Robin, Knockout, Groups)",
-        "Match Summary Cards for Social Media",
-        "Cloud Sync with Firebase",
-        "Offline Mode Support"
-      ],
-      "keywords": "football broadcasting app, OBS overlay, stream football matches, broadcast tournaments, OBS Studio overlay, Streamlabs overlay, XSplit football, vMix football overlay, Wirecast football, live match streaming, tournament broadcasting, football streaming software, real-time scoreboard overlay, match broadcasting app, sports streaming overlay, football live stream, tournament stream overlay, OBS football overlay, free football broadcasting, local match streaming"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="p67bcS6EVbdcZkb-eozOIBRy7tOoKOfhjDLpfr3O5Sw">
+
+  <title>Turfy – Free Football Match &amp; Tournament Tracker App</title>
+  <meta name="title" content="Turfy – Free Football Match &amp; Tournament Tracker App">
+  <meta name="description" content="Score football matches live, run tournaments, and track player stats automatically. 100% free forever, no ads, works offline. Built for grassroots players, team captains, and organizers.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://playturfy.com/">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://playturfy.com/">
+  <meta property="og:title" content="Turfy – Free Football Live Scoring &amp; Tournament App">
+  <meta property="og:description" content="Score matches live, run tournaments, and track player stats. Free forever, no ads, works offline. For grassroots players, captains, and organizers.">
+  <meta property="og:image" content="https://playturfy.com/images/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Turfy Football App - Score matches live, run tournaments, track stats">
+  <meta property="og:site_name" content="Playturfy">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://playturfy.com/">
+  <meta name="twitter:title" content="Turfy – Free Football Live Scoring &amp; Tournament App">
+  <meta name="twitter:description" content="Score matches live, run tournaments, and track player stats. Free forever, no ads, works offline.">
+  <meta name="twitter:image" content="https://playturfy.com/images/twitter-card.png">
+  <meta name="twitter:site" content="@PlayTurfy">
+  <meta name="twitter:creator" content="@PlayTurfy">
+
+  <!-- Favicons & Icons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#C6F432">
+
+  <!-- Fonts (Google Fonts CDN + local woff2 fallback) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L299SZQPMC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L299SZQPMC');
+
+    function trackDownload(location) {
+      gtag('event', 'download_click', {
+        'event_category': 'conversion',
+        'event_label': location,
+        'value': 1
+      });
     }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Playturfy Football Broadcasting Overlay",
-      "applicationCategory": "MultimediaApplication",
-      "operatingSystem": "Web Browser, OBS Studio, Streamlabs, XSplit",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "description": "Professional football broadcasting overlay for OBS Studio, Streamlabs, XSplit, vMix, and Wirecast. Stream live football matches and tournaments with real-time scoreboard, smart timer, extra time indicator, and match phase display. Free browser-based overlay for football streaming.",
-      "featureList": [
-        "Real-time scoreboard with team logos and scores",
-        "Smart timer with automatic half-time pause",
-        "Extra time indicator with live animation",
-        "Match phase display (1st Half, 2nd Half, Extra Time)",
-        "Compatible with OBS Studio, Streamlabs, XSplit, vMix, Wirecast",
-        "Browser source integration",
-        "Mobile to PC workflow",
-        "Professional lime green design"
-      ],
-      "screenshot": "https://playturfy.com/images/broadcasting-overlay-screenshot.svg"
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
+  </script>
+
+  <!-- Structured Data: Mobile Application -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Turfy - Football Match & Tournament Tracker",
+    "alternateName": "Playturfy",
+    "operatingSystem": "Android",
+    "applicationCategory": "SportsApplication",
+    "description": "Free app to score football matches live, run tournaments, and manage player stats. No ads, works offline. Built for street football, academies, and community leagues.",
+    "url": "https://playturfy.com/",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.turfy.matchscorer",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
       "@type": "Organization",
       "name": "Playturfy",
-      "url": "https://playturfy.com",
-      "logo": "https://playturfy.com/images/logo.svg",
-      "sameAs": [
-        "https://www.facebook.com/share/1SPFLM9UzT/",
-        "https://www.instagram.com/playturfy/",
-        "https://x.com/PlayTurfy"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "turfy.sports@gmail.com",
-        "contactType": "Customer Support"
-      }
+      "url": "https://playturfy.com/"
+    },
+    "featureList": [
+      "Live match scoring with events (goals, assists, cards, subs)",
+      "Tournament management (Round Robin, Knockout, Group Stage)",
+      "Automated tournament fixtures and live standings tables",
+      "Player stats tracking (goals, assists, cards, appearances)",
+      "Professional PDF match and tournament reports",
+      "Works 100% offline with automatic cloud sync",
+      "Live broadcasting overlay for OBS Studio and streaming software",
+      "Shareable match summary cards for social media"
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Playturfy",
+    "url": "https://playturfy.com/",
+    "logo": "https://playturfy.com/icons/icon-512.png",
+    "sameAs": [
+      "https://www.facebook.com/share/1SPFLM9UzT/",
+      "https://www.instagram.com/playturfy/",
+      "https://x.com/PlayTurfy"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "turfy.sports@gmail.com",
+      "contactType": "Customer Support"
     }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How do I broadcast football matches with Playturfy?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Broadcasting with Playturfy is easy: 1) Start your tournament match on mobile, 2) Tap the red cast icon (organizers only), 3) Copy the broadcast link, 4) Open OBS Studio on your PC, 5) Add Browser Source and paste the link, 6) Set size to 1920x1080, 7) Start streaming! Your overlay updates in real-time as you record match events on mobile."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What broadcasting software works with Playturfy?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Playturfy works with any broadcasting software that supports browser sources: OBS Studio (free, recommended), Streamlabs Desktop, XSplit Broadcaster, vMix, Wirecast, Restream Studio, StreamYard, Lightstream, Prism Live Studio, and more. If it can display a web page, it can display your Playturfy overlay."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is Playturfy broadcasting free?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! Playturfy is completely free to download and use, including all broadcasting features. There are no subscription fees, no hidden costs, and no ads. Stream unlimited football matches and tournaments with professional OBS overlay at no cost."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What features does the Playturfy broadcasting overlay include?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Playturfy broadcasting overlay includes: Real-time scoreboard with team logos and live scores, smart timer with automatic half-time pause, extra time indicator with live animation, match phase display (1st Half, 2nd Half, Extra Time), professional lime green design, and automatic updates as you record match events. Perfect for streaming local football tournaments."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use Playturfy for live streaming football tournaments?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely! Playturfy is designed for tournament broadcasting. Only tournament organizers can access broadcasting controls for security. Generate overlay links on mobile, paste into OBS on PC, and stream live with professional presentation. Real-time score updates, automatic timer sync, and match phase tracking make it perfect for tournament streaming."
-          }
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage (Accurately mirrors visible FAQ) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Turfy really 100% free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, completely free. There are no subscriptions, no in-app purchases, and zero ads. All features including live match scoring, tournament brackets, player stats, PDF reports, and OBS broadcasting overlays are free forever."
         }
-      ]
-    }
-    </script>
+      },
+      {
+        "@type": "Question",
+        "name": "Does Turfy work offline without internet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can score matches and manage tournaments on outdoor pitches with zero mobile signal. Everything saves locally on your phone and automatically syncs to the cloud whenever you reconnect."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which tournament formats are supported?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Turfy supports Round Robin (league format), Knockout (single elimination), Group Stages with knockout playoffs, and Finals. Fixtures generate automatically, and standings tables update the moment every match ends."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there an iPhone / iOS version?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Turfy is currently available for Android devices (Android 5.0+). An iPhone / iOS version is actively in development. You can join the iPhone waitlist on our website to get notified the day it launches on the Apple App Store."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the OBS broadcasting scoreboard work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Organizers can generate a live broadcast link directly from the app. Simply paste the link into OBS Studio, Streamlabs, or vMix as a Browser Source. The scoreboard overlay updates live on your stream whenever you tap a goal or card on your phone."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I export match reports and player stats to PDF?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Turfy generates professional PDF match reports and player statistics in one tap, ready to print or share with coaches, team sponsors, and league officials via WhatsApp or email."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
-<body class="bg-black text-white">
-    <!-- Header -->
-    <header id="header" class="fixed w-full top-0 z-50 transition-all duration-300">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="group">
-                <div class="relative">
-                    <img src="assets/newlogo.png" alt="Playturfy Logo" class="h-12 w-auto object-contain transform group-hover:scale-110 transition-all duration-300 drop-shadow-2xl">
-                    <div class="absolute -bottom-1 -right-1 w-3 h-3 bg-lime-500 rounded-full animate-ping"></div>
-                </div>
-            </a>
-            
-            <div class="hidden md:flex space-x-8 items-center">
-                <a href="#home" class="hover:text-lime-500 transition">Home</a>
-                <a href="#features" class="hover:text-lime-500 transition">Features</a>
-                <a href="news.html" class="hover:text-lime-500 transition">News</a>
-                <a href="#screenshots" class="hover:text-lime-500 transition">Screenshots</a>
-                <a href="#download" class="hover:text-lime-500 transition">Download</a>
-                <a href="#contact" class="hover:text-lime-500 transition">Contact</a>
-                <a href="privacy.html" class="hover:text-lime-500 transition">Privacy</a>
-                <a href="terms.html" class="hover:text-lime-500 transition">Terms</a>
-                <a href="#download" class="bg-lime-500 text-black px-6 py-2 rounded-xl font-semibold hover:bg-lime-400 transition">Download App</a>
-            </div>
-            
-            <button id="mobile-menu-btn" class="md:hidden text-lime-500">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </nav>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 border-t border-gray-800">
-            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
-                <a href="#home" class="hover:text-lime-500 transition">Home</a>
-                <a href="#features" class="hover:text-lime-500 transition">Features</a>
-                <a href="news.html" class="hover:text-lime-500 transition">News</a>
-                <a href="#screenshots" class="hover:text-lime-500 transition">Screenshots</a>
-                <a href="#download" class="hover:text-lime-500 transition">Download</a>
-                <a href="#contact" class="hover:text-lime-500 transition">Contact</a>
-                <a href="privacy.html" class="hover:text-lime-500 transition">Privacy</a>
-                <a href="terms.html" class="hover:text-lime-500 transition">Terms</a>
-                <a href="#download" class="bg-lime-500 text-black px-6 py-2 rounded-xl font-semibold hover:bg-lime-400 transition text-center">Download App</a>
-            </div>
-        </div>
-    </header>
 
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container header-nav">
+      <a href="index.html" class="brand-link" aria-label="Turfy Homepage">
+        <img src="assets/brand-logo.svg" alt="Turfy Logo" class="brand-logo" width="144" height="36">
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#roles">Who it's for</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="news.html">News</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website%26utm_medium=header_btn" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           onclick="trackDownload('header_btn')"
+           class="btn btn-lime btn-sm">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.609 1.814L13.793 12 3.61 22.186a1.99 1.99 0 01-.61-.954V2.768c.178-.387.41-.703.61-.954zm11.602 11.602l2.36 2.36-12.78 7.378 10.42-9.738zm0-2.832L4.79 1.846l12.78 7.378-2.36 2.36zm1.414 1.416l3.784-2.185c1.077-.621 1.077-1.637 0-2.258l-3.784-2.185-2.072 2.072 2.072 2.556z"/></svg>
+          Download Free
+        </a>
+
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+      <ul class="mobile-drawer-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#roles">Who it's for</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="news.html">Football News</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website%26utm_medium=mobile_drawer" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         onclick="trackDownload('mobile_drawer')"
+         class="btn btn-lime btn-lg" style="width: 100%;">
+        Get Turfy on Google Play
+      </a>
+    </div>
+  </header>
+
+  <main>
     <!-- Hero Section -->
-    <section id="home" class="pt-32 pb-20 px-6 min-h-screen flex items-center bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-20 left-10 w-72 h-72 bg-lime-500 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-20 right-10 w-96 h-96 bg-lime-500 rounded-full blur-3xl"></div>
-        </div>
-        
-        <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
-            <div class="space-y-6 animate-fade-in">
-                <h1 class="text-5xl md:text-7xl font-bold leading-tight">
-                    Manage Matches.<br>
-                    Manage Tournaments.<br>
-                    <span class="text-lime-500">Manage Stats.</span>
-                </h1>
-                <p class="text-xl text-gray-300">
-                    Turfy - The complete app to manage football matches, manage local tournaments, and manage football stats. Perfect for street football, local clubs, academies, and community leagues.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer" target="_blank" rel="noopener noreferrer" class="bg-lime-500 text-black px-8 py-4 rounded-xl font-semibold hover:bg-lime-400 transition flex items-center justify-center space-x-2">
-                        <i class="fab fa-google-play"></i>
-                        <span>Download on Play Store</span>
-                    </a>
-                    <a href="#features" class="border-2 border-lime-500 text-lime-500 px-8 py-4 rounded-xl font-semibold hover:bg-lime-500 hover:text-black transition text-center">
-                        Explore Features
-                    </a>
-                </div>
-            </div>
-            
-            <div class="relative animate-float max-w-md mx-auto">
-                <div class="bg-gradient-to-br from-lime-500 to-green-600 rounded-3xl p-4 shadow-2xl transform rotate-3 hover:rotate-0 transition duration-500">
-                    <div class="overflow-hidden">
-                        <img src="assets/App screenshots/Track Every Match.png" alt="Track Every Match - Playturfy App" width="400" height="800" class="w-full h-auto rounded-xl shadow-lg" loading="eager">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="hero" id="home">
+      <div class="hero-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+            Grassroots Football App
+          </span>
 
-    <!-- About Section -->
-    <section class="py-20 px-6 bg-gray-900">
-        <div class="container mx-auto max-w-4xl text-center space-y-6">
-            <h2 class="text-4xl md:text-5xl font-bold">About <span class="text-lime-500">Turfy</span></h2>
-            <p class="text-xl text-gray-300 leading-relaxed">
-                Turfy (Playturfy) makes it easy to manage football matches, manage tournaments, and manage football stats. Our turfy app helps you manage local matches, record goals, cards, substitutions, tournament formats, match results, and generate summary cards — all from your phone, in seconds. Perfect for managing street football and local community tournaments.
-            </p>
-            <div class="grid md:grid-cols-3 gap-6 pt-8">
-                <div class="bg-black rounded-2xl p-6 border border-gray-800 hover:border-lime-500 transition">
-                    <div class="w-16 h-16 bg-lime-500 rounded-xl flex items-center justify-center mb-4">
-                        <i class="fas fa-bolt text-black text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Lightning Fast</h3>
-                    <p class="text-gray-400">Optimized for speed and performance</p>
-                </div>
-                <div class="bg-black rounded-2xl p-6 border border-gray-800 hover:border-lime-500 transition">
-                    <div class="w-16 h-16 bg-lime-500 rounded-xl flex items-center justify-center mb-4">
-                        <i class="fas fa-shield-alt text-black text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Secure & Safe</h3>
-                    <p class="text-gray-400">Your data protected with Firebase</p>
-                </div>
-                <div class="bg-black rounded-2xl p-6 border border-gray-800 hover:border-lime-500 transition">
-                    <div class="w-16 h-16 bg-lime-500 rounded-xl flex items-center justify-center mb-4">
-                        <i class="fas fa-mobile-alt text-black text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Mobile First</h3>
-                    <p class="text-gray-400">Designed for on-the-go management</p>
-                </div>
-            </div>
-        </div>
-    </section>
+          <h1 class="hero-title">
+            Score matches live.<br>
+            Run tournaments.<br>
+            <span class="lime">Track every stat.</span>
+          </h1>
 
-    <!-- Features Section -->
-    <section id="features" class="py-20 px-6 bg-black">
-        <div class="container mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Powerful <span class="text-lime-500">Features</span></h2>
-                <p class="text-xl text-gray-400">Everything you need to manage football matches and tournaments</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 - NEW: Create Your Own Team -->
-                <div class="bg-gradient-to-br from-lime-500 to-green-600 rounded-2xl p-8 hover:scale-105 transition-transform group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-black text-lime-500 px-3 py-1 text-xs font-bold rounded-bl-xl">NEW</div>
-                    <div class="w-16 h-16 bg-black rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                        <i class="fas fa-users-cog text-lime-500 text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3 text-black">Create Your Own Team</h3>
-                    <p class="text-gray-900">Build custom teams with your own players, invite members, customize jerseys, upload logos, and manage your squad like a pro!</p>
-                </div>
-                
-                <!-- Feature 2 -->
-                <div class="bg-gray-900 rounded-2xl p-8 hover:bg-gray-800 transition group">
-                    <div class="w-16 h-16 bg-lime-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                        <i class="fas fa-stopwatch text-black text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Live Score Tracking</h3>
-                    <p class="text-gray-400">Track goals, assists, cards, and substitutions in real-time during matches.</p>
-                </div>
-                
-                <!-- Feature 3 -->
-                <div class="bg-gray-900 rounded-2xl p-8 hover:bg-gray-800 transition group">
-                    <div class="w-16 h-16 bg-lime-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                        <i class="fas fa-users text-black text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Team & Player Management</h3>
-                    <p class="text-gray-400">Add players, upload logos, update profiles, and manage your entire squad easily.</p>
-                </div>
-                
-                <!-- Feature 4 -->
-                <div class="bg-gray-900 rounded-2xl p-8 hover:bg-gray-800 transition group">
-                    <div class="w-16 h-16 bg-lime-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                        <i class="fas fa-trophy text-black text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Tournament System</h3>
-                    <p class="text-gray-400">Supports Round Robin, Knockouts, Groups, and Finals formats.</p>
-                </div>
-                
-                <!-- Feature 5 -->
-                <div class="bg-gray-900 rounded-2xl p-8 hover:bg-gray-800 transition group">
-                    <div class="w-16 h-16 bg-lime-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                        <i class="fas fa-user-plus text-black text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Team Invitations</h3>
-                    <p class="text-gray-400">Invite players to join your team with unique team codes. Build your squad together!</p>
-                </div>
-                
-                <!-- Feature 6 -->
-                <div class="bg-gray-900 rounded-2xl p-8 hover:bg-gray-800 transition group">
-                    <div class="w-16 h-16 bg-lime-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                        <i class="fas fa-image text-black text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Match Summary Cards</h3>
-                    <p class="text-gray-400">Auto-generated summary cards for downloading and sharing on social media.</p>
-                </div>
-                
-                <!-- Feature 7 -->
-                <div class="bg-gray-900 rounded-2xl p-8 hover:bg-gray-800 transition group">
-                    <div class="w-16 h-16 bg-lime-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                        <i class="fas fa-shield-alt text-black text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Team Logo Upload System</h3>
-                    <p class="text-gray-400">Upload from device, pick from leagues, or choose club logos from organized folders.</p>
-                </div>
-                
-                <!-- Feature 8 -->
-                <div class="bg-gray-900 rounded-2xl p-8 hover:bg-gray-800 transition group">
-                    <div class="w-16 h-16 bg-lime-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                        <i class="fas fa-user-circle text-black text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Player Photos Support</h3>
-                    <p class="text-gray-400">Add player photos to personalize your team roster and lineups.</p>
-                </div>
-                
-                <!-- Feature 9 -->
-                <div class="bg-gray-900 rounded-2xl p-8 hover:bg-gray-800 transition group">
-                    <div class="w-16 h-16 bg-lime-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                        <i class="fas fa-cloud text-black text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Cloud Sync</h3>
-                    <p class="text-gray-400">All data stored securely with Firebase. Access from anywhere, anytime.</p>
-                </div>
-                
-                <!-- Feature 10 -->
-                <div class="bg-gray-900 rounded-2xl p-8 hover:bg-gray-800 transition group">
-                    <div class="w-16 h-16 bg-lime-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                        <i class="fas fa-share-alt text-black text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Share Matches & Tournaments</h3>
-                    <p class="text-gray-400">Social media share options to showcase your matches and results.</p>
-                </div>
-                
-                <!-- Feature 11 - NEW: Team Statistics Dashboard -->
-                <div class="bg-gradient-to-br from-lime-500 to-green-600 rounded-2xl p-8 hover:scale-105 transition-transform group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-black text-lime-500 px-3 py-1 text-xs font-bold rounded-bl-xl">NEW</div>
-                    <div class="w-16 h-16 bg-black rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                        <i class="fas fa-chart-line text-lime-500 text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3 text-black">Team Statistics Dashboard</h3>
-                    <p class="text-gray-900">Comprehensive team stats with wins, losses, goals, clean sheets, top scorers, assists, form guide, scoring patterns (1st vs 2nd half), and recent match history!</p>
-                </div>
-                
-                <!-- Feature 12 - NEW: Professional PDF Reports -->
-                <div class="bg-gradient-to-br from-lime-500 to-green-600 rounded-2xl p-8 hover:scale-105 transition-transform group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-black text-lime-500 px-3 py-1 text-xs font-bold rounded-bl-xl">NEW</div>
-                    <div class="w-16 h-16 bg-black rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                        <i class="fas fa-file-pdf text-lime-500 text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3 text-black">Professional PDF Reports</h3>
-                    <p class="text-gray-900">Generate beautiful PDF team statistics reports with top 8 scorers, key metrics, performance charts, and professional lime green design. Perfect for sharing with coaches and sponsors!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Broadcasting Feature Highlight Section -->
-    <section class="py-20 px-6 bg-black relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-20 left-10 w-96 h-96 bg-lime-500 rounded-full blur-3xl animate-pulse"></div>
-            <div class="absolute bottom-20 right-10 w-96 h-96 bg-lime-500 rounded-full blur-3xl animate-pulse"></div>
-        </div>
-        
-        <div class="container mx-auto relative z-10">
-            <div class="text-center mb-16">
-                <div class="inline-block bg-lime-500 text-black px-6 py-2 rounded-full font-bold mb-4 animate-pulse">
-                    NEW FEATURE - LIVE BROADCASTING
-                </div>
-                <h2 class="text-4xl md:text-6xl font-bold mb-6 text-white">
-                    Live <span class="text-lime-500">Broadcasting</span> System
-                </h2>
-                <p class="text-xl text-gray-200 max-w-3xl mx-auto">
-                    Transform your tournament matches into professional broadcasts! Stream live to OBS, Streamlabs, XSplit, and more with our real-time overlay system.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-16">
-                <div class="space-y-4 md:space-y-6 order-2 md:order-1">
-                    <div class="bg-black/50 backdrop-blur-sm rounded-2xl p-4 md:p-6 border-2 border-lime-500">
-                        <div class="flex items-start space-x-3 md:space-x-4">
-                            <div class="w-10 h-10 md:w-12 md:h-12 bg-lime-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-broadcast-tower text-black text-lg md:text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg md:text-xl font-bold text-white mb-1 md:mb-2">Real-Time Overlay</h3>
-                                <p class="text-sm md:text-base text-gray-300">Professional scoreboard with team names, logos, and live scores that update instantly as you record match events.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-black/50 backdrop-blur-sm rounded-2xl p-4 md:p-6 border-2 border-lime-500">
-                        <div class="flex items-start space-x-3 md:space-x-4">
-                            <div class="w-10 h-10 md:w-12 md:h-12 bg-lime-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-stopwatch text-black text-lg md:text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg md:text-xl font-bold text-white mb-1 md:mb-2">Smart Timer System</h3>
-                                <p class="text-sm md:text-base text-gray-300">Automatic timer with half-time pause, match phase display (1ST HALF, 2ND HALF), and extra time indicator with live animation.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-black/50 backdrop-blur-sm rounded-2xl p-4 md:p-6 border-2 border-lime-500">
-                        <div class="flex items-start space-x-3 md:space-x-4">
-                            <div class="w-10 h-10 md:w-12 md:h-12 bg-lime-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-link text-black text-lg md:text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg md:text-xl font-bold text-white mb-1 md:mb-2">One-Click Link Generation</h3>
-                                <p class="text-sm md:text-base text-gray-300">Generate broadcast link on mobile, copy and paste into OBS on PC. No complex setup - just copy, paste, and stream!</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-black/50 backdrop-blur-sm rounded-2xl p-4 md:p-6 border-2 border-lime-500">
-                        <div class="flex items-start space-x-3 md:space-x-4">
-                            <div class="w-10 h-10 md:w-12 md:h-12 bg-lime-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-desktop text-black text-lg md:text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg md:text-xl font-bold text-white mb-1 md:mb-2">Universal Compatibility</h3>
-                                <p class="text-sm md:text-base text-gray-300">Works with OBS Studio, Streamlabs, XSplit, vMix, Wirecast, and any broadcasting software that supports browser sources.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="relative order-1 md:order-2">
-                    <div class="bg-black rounded-2xl md:rounded-3xl p-4 md:p-8 border-2 md:border-4 border-lime-500 shadow-2xl shadow-lime-500/50">
-                        <div class="bg-gradient-to-br from-gray-900 to-black rounded-xl md:rounded-2xl p-4 md:p-6 border border-gray-700 md:border-2">
-                            <div class="flex items-center justify-between mb-4 md:mb-6 flex-wrap gap-2">
-                                <div class="flex items-center space-x-2 md:space-x-3">
-                                    <div class="w-2 h-2 md:w-3 md:h-3 bg-red-500 rounded-full animate-pulse"></div>
-                                    <span class="text-white font-bold text-sm md:text-base">LIVE BROADCAST</span>
-                                </div>
-                                <div class="bg-lime-500 text-black px-3 py-1 md:px-4 md:py-2 rounded-lg font-bold text-sm md:text-base">
-                                    45:00
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-center justify-between bg-gray-800 rounded-lg md:rounded-xl p-3 md:p-6 gap-2">
-                                <div class="flex items-center space-x-2 md:space-x-4">
-                                    <div class="w-10 h-10 md:w-16 md:h-16 bg-lime-500 rounded-full flex items-center justify-center flex-shrink-0">
-                                        <i class="fas fa-shield-alt text-black text-base md:text-2xl"></i>
-                                    </div>
-                                    <div class="min-w-0">
-                                        <div class="text-white font-bold text-sm md:text-xl truncate">TEAM A</div>
-                                        <div class="text-gray-400 text-xs md:text-sm">Home</div>
-                                    </div>
-                                </div>
-                                
-                                <div class="text-center flex-shrink-0">
-                                    <div class="text-2xl md:text-5xl font-bold text-white">2 - 1</div>
-                                </div>
-                                
-                                <div class="flex items-center space-x-2 md:space-x-4">
-                                    <div class="min-w-0">
-                                        <div class="text-white font-bold text-sm md:text-xl text-right truncate">TEAM B</div>
-                                        <div class="text-gray-400 text-xs md:text-sm text-right">Away</div>
-                                    </div>
-                                    <div class="w-10 h-10 md:w-16 md:h-16 bg-lime-500 rounded-full flex items-center justify-center flex-shrink-0">
-                                        <i class="fas fa-futbol text-black text-base md:text-2xl"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="mt-3 md:mt-4 bg-red-600 rounded-lg p-2 md:p-3 flex items-center justify-center space-x-2">
-                                <div class="w-1.5 h-1.5 md:w-2 md:h-2 bg-white rounded-full animate-pulse"></div>
-                                <span class="text-white font-bold text-xs md:text-base">+3 EXTRA TIME</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-4 md:mt-6 text-center">
-                            <p class="text-lime-500 font-bold text-base md:text-lg">Professional Overlay Preview</p>
-                            <p class="text-gray-400 text-xs md:text-sm">Real-time updates • Smart timer • Extra time indicator</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center">
-                <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6">How Broadcasting Works</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
-                    <div class="bg-black/50 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-lime-500">
-                        <div class="w-10 h-10 md:w-12 md:h-12 bg-lime-500 rounded-full flex items-center justify-center text-black font-bold text-lg md:text-xl mx-auto mb-3 md:mb-4">1</div>
-                        <h4 class="text-white font-bold mb-1 md:mb-2 text-sm md:text-base">Start Match</h4>
-                        <p class="text-gray-300 text-xs md:text-sm">Create and start your tournament match on mobile</p>
-                    </div>
-                    
-                    <div class="bg-black/50 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-lime-500">
-                        <div class="w-10 h-10 md:w-12 md:h-12 bg-lime-500 rounded-full flex items-center justify-center text-black font-bold text-lg md:text-xl mx-auto mb-3 md:mb-4">2</div>
-                        <h4 class="text-white font-bold mb-1 md:mb-2 text-sm md:text-base">Get Link</h4>
-                        <p class="text-gray-300 text-xs md:text-sm">Tap red cast icon and copy broadcast link</p>
-                    </div>
-                    
-                    <div class="bg-black/50 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-lime-500">
-                        <div class="w-10 h-10 md:w-12 md:h-12 bg-lime-500 rounded-full flex items-center justify-center text-black font-bold text-lg md:text-xl mx-auto mb-3 md:mb-4">3</div>
-                        <h4 class="text-white font-bold mb-1 md:mb-2 text-sm md:text-base">Add to OBS</h4>
-                        <p class="text-gray-300 text-xs md:text-sm">Paste link as browser source in OBS</p>
-                    </div>
-                    
-                    <div class="bg-black/50 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-lime-500">
-                        <div class="w-10 h-10 md:w-12 md:h-12 bg-lime-500 rounded-full flex items-center justify-center text-black font-bold text-lg md:text-xl mx-auto mb-3 md:mb-4">4</div>
-                        <h4 class="text-white font-bold mb-1 md:mb-2 text-sm md:text-base">Go Live!</h4>
-                        <p class="text-gray-300 text-xs md:text-sm">Stream with professional overlay</p>
-                    </div>
-                </div>
-                
-                <div class="mt-8 md:mt-12">
-                    <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 md:space-x-3 bg-lime-500 text-black px-6 py-3 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-bold hover:bg-lime-400 transition text-base md:text-lg shadow-2xl shadow-lime-500/50">
-                        <i class="fas fa-download text-xl md:text-2xl"></i>
-                        <span>Download & Start Broadcasting</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+          <p class="hero-desc">
+            The free football app built for street football, academies, and community leagues. No pen and paper, no WhatsApp chaos.
+          </p>
 
-    <!-- How It Works Section -->
-    <section class="py-20 px-6 bg-gray-900">
-        <div class="container mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">How It <span class="text-lime-500">Works</span></h2>
-                <p class="text-xl text-gray-400">Get started in three simple steps</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Step 1 -->
-                <div class="relative">
-                    <div class="bg-black rounded-2xl p-8 border-2 border-lime-500 hover:shadow-2xl hover:shadow-lime-500/20 transition">
-                        <div class="absolute -top-6 left-8 w-12 h-12 bg-lime-500 rounded-xl flex items-center justify-center text-black font-bold text-xl">
-                            1
-                        </div>
-                        <div class="mt-4">
-                            <h3 class="text-2xl font-bold mb-4">Create Your Match</h3>
-                            <p class="text-gray-400">Choose teams, set lineups, upload logos, and configure match settings.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Step 2 -->
-                <div class="relative">
-                    <div class="bg-black rounded-2xl p-8 border-2 border-lime-500 hover:shadow-2xl hover:shadow-lime-500/20 transition">
-                        <div class="absolute -top-6 left-8 w-12 h-12 bg-lime-500 rounded-xl flex items-center justify-center text-black font-bold text-xl">
-                            2
-                        </div>
-                        <div class="mt-4">
-                            <h3 class="text-2xl font-bold mb-4">Start Recording</h3>
-                            <p class="text-gray-400">Tap to record goals, cards, and substitutions instantly during the match.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Step 3 -->
-                <div class="relative">
-                    <div class="bg-black rounded-2xl p-8 border-2 border-lime-500 hover:shadow-2xl hover:shadow-lime-500/20 transition">
-                        <div class="absolute -top-6 left-8 w-12 h-12 bg-lime-500 rounded-xl flex items-center justify-center text-black font-bold text-xl">
-                            3
-                        </div>
-                        <div class="mt-4">
-                            <h3 class="text-2xl font-bold mb-4">Share</h3>
-                            <p class="text-gray-400">Download match summary card and share with your community on social media.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Screenshots Section -->
-    <section id="screenshots" class="py-20 px-6 bg-black">
-        <div class="container mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">App <span class="text-lime-500">Screenshots</span></h2>
-                <p class="text-xl text-gray-400">See Playturfy in action</p>
-            </div>
-            
-            <div class="relative">
-                <div id="screenshot-slider" class="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide">
-                    <!-- Screenshot 1: Homepage -->
-                    <div class="flex-shrink-0 w-64 snap-center">
-                        <div class="bg-gradient-to-br from-lime-500 to-green-600 rounded-3xl p-4 shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                            <img src="assets/App screenshots/New homepage.png" alt="Playturfy Homepage" class="rounded-2xl w-full h-auto shadow-lg">
-                            <p class="text-center text-white font-semibold mt-3">Home Screen</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Screenshot 2: Live Match -->
-                    <div class="flex-shrink-0 w-64 snap-center">
-                        <div class="bg-gradient-to-br from-lime-500 to-green-600 rounded-3xl p-4 shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                            <img src="assets/App screenshots/new live match page.png" alt="Live Match Tracking" class="rounded-2xl w-full h-auto shadow-lg">
-                            <p class="text-center text-white font-semibold mt-3">Live Match</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Screenshot 3: Match Summary -->
-                    <div class="flex-shrink-0 w-64 snap-center">
-                        <div class="bg-gradient-to-br from-lime-500 to-green-600 rounded-3xl p-4 shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                            <img src="assets/App screenshots/new match summary page.png" alt="Match Summary" class="rounded-2xl w-full h-auto shadow-lg">
-                            <p class="text-center text-white font-semibold mt-3">Match Summary</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Screenshot 4: Tournaments -->
-                    <div class="flex-shrink-0 w-64 snap-center">
-                        <div class="bg-gradient-to-br from-lime-500 to-green-600 rounded-3xl p-4 shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                            <img src="assets/App screenshots/new tourneemtn.png" alt="Tournament Management" class="rounded-2xl w-full h-auto shadow-lg">
-                            <p class="text-center text-white font-semibold mt-3">Tournaments</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Screenshot 5: Statistics -->
-                    <div class="flex-shrink-0 w-64 snap-center">
-                        <div class="bg-gradient-to-br from-lime-500 to-green-600 rounded-3xl p-4 shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                            <img src="assets/App screenshots/stats.png" alt="Player Statistics" class="rounded-2xl w-full h-auto shadow-lg">
-                            <p class="text-center text-white font-semibold mt-3">Statistics</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Download Section -->
-    <section id="download" class="py-20 px-6 bg-gradient-to-br from-lime-500 to-green-600">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-bold text-black mb-6">Download Turfy App on Google Play</h2>
-            <p class="text-xl text-black mb-8 max-w-2xl mx-auto">
-                Join thousands of players, organizers, and clubs who use Turfy to manage matches, manage tournaments, and manage football stats for their local football communities.
-            </p>
-            <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3 bg-black text-white px-10 py-5 rounded-2xl font-semibold hover:bg-gray-900 transition text-lg">
-                <i class="fab fa-google-play text-3xl"></i>
-                <div class="text-left">
-                    <div class="text-xs">GET IT ON</div>
-                    <div class="text-xl font-bold">Google Play</div>
-                </div>
+          <div class="hero-ctas">
+            <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website%26utm_medium=hero_primary"
+               target="_blank"
+               rel="noopener noreferrer"
+               onclick="trackDownload('hero_primary')"
+               class="btn-play">
+              <svg width="26" height="26" viewBox="0 0 512 512" aria-hidden="true">
+                <path fill="#00D3FF" d="M47.7 21.6C44.3 25.2 42.4 30.6 42.4 37.5V474.5c0 6.9 1.9 12.3 5.3 15.9l2.4 2.2 244.7-244.7v-5.8L50.1 19.4l-2.4 2.2z"/>
+                <path fill="#00F076" d="M375.9 316.5l-81.1-81.1v-5.8l81.1-81.1 1.9 1.1 96.1 54.6c27.4 15.6 27.4 41.1 0 56.7l-96.1 54.6-1.9 1z"/>
+                <path fill="#FFCE00" d="M294.8 235.4L50.1 492.6c9 9.5 23.9 10.7 40.5 1.3l287.2-163.2-83-95.3z"/>
+                <path fill="#FF3A44" d="M294.8 276.6l83-95.3L90.6 18.1c-16.6-9.4-31.5-8.2-40.5 1.3l244.7 257.2z"/>
+              </svg>
+              <div class="btn-play-text">
+                <span class="btn-play-sub">Get it on</span>
+                <span class="btn-play-title">Google Play</span>
+              </div>
             </a>
+
+            <button type="button" class="hero-ios-link" data-open-waitlist>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.87-.9.04-2 .6-2.65 1.35-.58.65-1.09 1.72-.95 2.76 1.01.08 2.06-.51 2.68-1.24z"/></svg>
+              <span>iPhone coming soon · <strong>Get notified</strong></span>
+            </button>
+          </div>
+
+          <div class="hero-rating-chip">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <span class="rating-text"><strong>5.0</strong> on Google Play · 100% Free · No Ads</span>
+          </div>
+
+          <div class="hero-checks">
+            <span class="hero-check-item">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+              Free forever
+            </span>
+            <span class="hero-check-item">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+              No ads
+            </span>
+            <span class="hero-check-item">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+              Works offline
+            </span>
+          </div>
         </div>
+
+        <!-- Hero Mockup Phone with Live Pill -->
+        <div class="phone-mockup">
+          <div class="phone-frame">
+            <img src="assets/optimized/hero-phone.webp" 
+                 alt="Turfy Match Tracker Interface" 
+                 class="phone-screen" 
+                 width="310" 
+                 height="688" 
+                 loading="eager">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust / Proof Strip -->
+    <section class="trust-strip" aria-label="App Highlights">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div>
+              <div class="trust-title">Tap-to-Score Live</div>
+              <div class="trust-sub">Goals, cards &amp; subs in real time</div>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H7c-.55 0-1-.45-1-1v-2.34"></path><path d="M18 14.66V17c0 .55-.45 1-1 1h-2c-.55 0-1-.45-1-1v-2.34"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
+            </div>
+            <div>
+              <div class="trust-title">Automated Tournaments</div>
+              <div class="trust-sub">Round Robin, groups &amp; knockouts</div>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            </div>
+            <div>
+              <div class="trust-title">Stats &amp; PDF Reports</div>
+              <div class="trust-sub">Player cards &amp; shareable results</div>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="1" y1="1" x2="23" y2="23"></line><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"></path><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"></path><path d="M10.71 5.05A16 16 0 0 1 22.58 9"></path><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+            </div>
+            <div>
+              <div class="trust-title">100% Offline Mode</div>
+              <div class="trust-sub">Works on pitches with zero signal</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Features (3 Core Capabilities) -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Core Features</span>
+          <h2 class="section-title">Everything you need on matchday.</h2>
+          <p class="section-desc">Designed to replace chaotic group chats, lost notebooks, and manual tables with one simple tap.</p>
+        </div>
+
+        <!-- 1. Live Scoring -->
+        <div class="feature-row">
+          <div class="feature-card-media">
+            <img src="assets/optimized/feature-scoring.webp" alt="Live match scoring screen with goal, card, and substitution buttons" loading="lazy" width="250" height="555">
+          </div>
+          <div class="feature-info">
+            <span class="section-tag">Feature #1</span>
+            <h3 class="feature-title">Live Match Scoring</h3>
+            <p class="feature-desc">Tap once to record a goal, card, assist, or substitution. Match timer, extra time, and half-time pauses are all built in with instant undo.</p>
+            <ul class="feature-list">
+              <li>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                <span><strong>Instant event buttons:</strong> Goal, Sub, Card, Pause, and quick Undo.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                <span><strong>Player tagging:</strong> Tag who scored and who assisted with one tap.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                <span><strong>Match phases:</strong> Automatic 1st Half, 2nd Half, and Extra Time tracking.</span>
+              </li>
+            </ul>
+            <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website%26utm_medium=feature_scoring" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               onclick="trackDownload('feature_scoring')"
+               class="btn btn-lime btn-sm">
+              Try Live Scoring Free →
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Tournament Management -->
+        <div class="feature-row reverse">
+          <div class="feature-card-media">
+            <img src="assets/optimized/feature-tournaments.webp" alt="Tournament brackets, fixtures and standings tables" loading="lazy" width="250" height="555">
+          </div>
+          <div class="feature-info">
+            <span class="section-tag">Feature #2</span>
+            <h3 class="feature-title">Automated Tournaments</h3>
+            <p class="feature-desc">Set up your tournament in minutes. Fixtures generate automatically, and group tables calculate points, goal difference, and head-to-head live.</p>
+            <ul class="feature-list">
+              <li>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                <span><strong>Multiple formats:</strong> Round Robin, Knockout, Group Stages + Finals.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                <span><strong>Live standings:</strong> Points, wins, losses, goals for/against auto-calculate.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                <span><strong>Brackets:</strong> Knockout trees fill themselves in as winners advance.</span>
+              </li>
+            </ul>
+            <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website%26utm_medium=feature_tournaments" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               onclick="trackDownload('feature_tournaments')"
+               class="btn btn-lime btn-sm">
+              Create a Tournament →
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Player Stats & Reports -->
+        <div class="feature-row">
+          <div class="feature-card-media">
+            <img src="assets/optimized/feature-stats.webp" alt="Player statistics dashboard showing goals, assists, and cards" loading="lazy" width="250" height="555">
+          </div>
+          <div class="feature-info">
+            <span class="section-tag">Feature #3</span>
+            <h3 class="feature-title">Player Stats &amp; PDF Reports</h3>
+            <p class="feature-desc">Every goal, assist, yellow card, and appearance is preserved on each player's profile. Export professional PDF summaries in one tap.</p>
+            <ul class="feature-list">
+              <li>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                <span><strong>Career stats:</strong> Goals, assists, clean sheets, and card history.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                <span><strong>One-tap PDF:</strong> Share printable match sheets with coaches or sponsors.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                <span><strong>Top scorers leaderboard:</strong> Golden boot tracking for your tournament.</span>
+              </li>
+            </ul>
+            <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website%26utm_medium=feature_stats" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               onclick="trackDownload('feature_stats')"
+               class="btn btn-lime btn-sm">
+              Track Your Stats →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Role Selector (Player / Captain / Organizer) -->
+    <section class="roles-section" id="roles">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Personalized Experience</span>
+          <h2 class="section-title">Built for everyone on the pitch.</h2>
+          <p class="section-desc">Choose your role to see how Turfy makes your matchday easier.</p>
+        </div>
+
+        <div class="role-tabs" role="tablist">
+          <button class="role-tab-btn active" data-role="player" role="tab" aria-selected="true">Players</button>
+          <button class="role-tab-btn" data-role="captain" role="tab" aria-selected="false">Team Captains</button>
+          <button class="role-tab-btn" data-role="organizer" role="tab" aria-selected="false">Tournament Organizers</button>
+        </div>
+
+        <div class="role-panels">
+          <!-- Player Panel -->
+          <div class="role-panel active" id="role-player">
+            <div>
+              <h3 class="role-panel-title">Track your personal football journey</h3>
+              <p class="role-panel-desc">Stop debating who scored or who has the most assists. Your stats are recorded in real-time, saved to your profile, and ready to share with friends.</p>
+              <ul class="feature-list" style="margin-bottom: 24px;">
+                <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> <span>Personal goal, assist, and card tallies</span></li>
+                <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> <span>Join multiple squads with a team invite code</span></li>
+                <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> <span>Match summary cards formatted for WhatsApp &amp; Instagram</span></li>
+              </ul>
+              <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website%26utm_medium=role_player" 
+                 target="_blank" rel="noopener noreferrer" onclick="trackDownload('role_player')" class="btn btn-lime btn-sm">Get Turfy for Players</a>
+            </div>
+            <div style="display: flex; justify-content: center;">
+              <img src="assets/optimized/feature-home.webp" alt="Player Dashboard" class="role-panel-img" width="240" height="533" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Captain Panel -->
+          <div class="role-panel" id="role-captain">
+            <div>
+              <h3 class="role-panel-title">Manage your squad without spreadsheets</h3>
+              <p class="role-panel-desc">Set starting lineups, track substitutions during the game, and keep an official record of every fixture your squad plays throughout the season.</p>
+              <ul class="feature-list" style="margin-bottom: 24px;">
+                <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> <span>Full squad roster with photos and jersey numbers</span></li>
+                <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> <span>Pre-match lineups and real-time sub logging</span></li>
+                <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> <span>Instant match cards to share with your team chat</span></li>
+              </ul>
+              <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website%26utm_medium=role_captain" 
+                 target="_blank" rel="noopener noreferrer" onclick="trackDownload('role_captain')" class="btn btn-lime btn-sm">Get Turfy for Captains</a>
+            </div>
+            <div style="display: flex; justify-content: center;">
+              <img src="assets/optimized/feature-summary.webp" alt="Squad and Match Summary" class="role-panel-img" width="240" height="533" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Organizer Panel -->
+          <div class="role-panel" id="role-organizer">
+            <div>
+              <h3 class="role-panel-title">Run professional local tournaments</h3>
+              <p class="role-panel-desc">Eliminate manual calculations. Generate brackets, update group tables as games finish, and even stream matches live with an OBS scoreboard overlay.</p>
+              <ul class="feature-list" style="margin-bottom: 24px;">
+                <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> <span>Auto-generated round robin &amp; knockout brackets</span></li>
+                <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> <span>OBS / Streamlabs live scoreboard overlay integration</span></li>
+                <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> <span>Official PDF tournament reports for sponsors and teams</span></li>
+              </ul>
+              <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website%26utm_medium=role_organizer" 
+                 target="_blank" rel="noopener noreferrer" onclick="trackDownload('role_organizer')" class="btn btn-lime btn-sm">Get Turfy for Organizers</a>
+            </div>
+            <div style="display: flex; justify-content: center;">
+              <img src="assets/optimized/feature-tournaments.webp" alt="Tournament Organizer Panel" class="role-panel-img" width="240" height="533" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Extra Capabilities Grid (OBS, Football News, Offline Sync) -->
+    <section class="extras-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Power Features</span>
+          <h2 class="section-title">Everything else packed inside Turfy.</h2>
+          <p class="section-desc">More tools built specifically for local and grassroots football.</p>
+        </div>
+
+        <div class="extras-grid">
+          <div class="extra-card">
+            <div class="extra-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+            </div>
+            <h3 class="extra-title">Live OBS Scoreboard Overlay</h3>
+            <p class="extra-desc">Streaming your local finals? Tap the cast icon on your phone, paste the link into OBS or Streamlabs as a Browser Source, and your stream gets a live scoreboard overlay automatically.</p>
+          </div>
+
+          <div class="extra-card">
+            <div class="extra-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1m2 13a2 2 0 0 1-2-2V7m2 13a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
+            </div>
+            <h3 class="extra-title">Football News Inside the App</h3>
+            <p class="extra-desc">Stay updated between fixtures. Turfy pulls the latest football stories, match reports, and tactical features directly into your app feed via our automated news API.</p>
+          </div>
+
+          <div class="extra-card">
+            <div class="extra-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+            </div>
+            <h3 class="extra-title">Shareable Social Cards</h3>
+            <p class="extra-desc">Finished a thriller? Turfy formats the final score, goal scorers, and team badges into a clean match card ready for your WhatsApp group, Instagram story, or Facebook post.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works (3 Steps) -->
+    <section class="steps-section" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Quick Setup</span>
+          <h2 class="section-title">Ready in 3 simple steps.</h2>
+          <p class="section-desc">No complicated onboarding. You can score your first match within 60 seconds.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <h3 class="step-title">Create Your Match</h3>
+            <p class="step-desc">Pick two teams, set match duration, and choose your starting lineup or jump straight in.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <h3 class="step-title">Score It Live</h3>
+            <p class="step-desc">Tap to record goals, cards, and substitutions as they happen right on the pitch.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <h3 class="step-title">Share &amp; Export</h3>
+            <p class="step-desc">Generate a match summary card for your group chat or export a full PDF sheet for the record.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-20 px-6 bg-gray-900">
-        <div class="container mx-auto max-w-4xl">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Frequently Asked <span class="text-lime-500">Questions</span></h2>
-                <p class="text-xl text-gray-400">Everything you need to know about Turfy - Manage Matches, Tournaments & Stats</p>
-            </div>
-            
-            <div class="space-y-4">
-                <!-- FAQ 1 -->
-                <div class="faq-item bg-black rounded-2xl border border-gray-800 overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-900 transition">
-                        <span class="text-xl font-semibold">Is the app free?</span>
-                        <i class="fas fa-chevron-down text-lime-500 transition-transform"></i>
-                    </button>
-                    <div class="faq-answer px-6 text-gray-400">
-                        Yes! Playturfy is completely free to download and use. We offer a clean, ad-free experience for all users.
-                    </div>
-                </div>
-                
-                <!-- FAQ 2 -->
-                <div class="faq-item bg-black rounded-2xl border border-gray-800 overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-900 transition">
-                        <span class="text-xl font-semibold">Can I create my own team?</span>
-                        <i class="fas fa-chevron-down text-lime-500 transition-transform"></i>
-                    </button>
-                    <div class="faq-answer px-6 text-gray-400">
-                        Yes! You can create custom teams, add your own players, customize jerseys, upload team logos, and invite other users to join your team. Build and manage your squad exactly how you want!
-                    </div>
-                </div>
-                
-                <!-- FAQ 3 -->
-                <div class="faq-item bg-black rounded-2xl border border-gray-800 overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-900 transition">
-                        <span class="text-xl font-semibold">Can I manage tournaments?</span>
-                        <i class="fas fa-chevron-down text-lime-500 transition-transform"></i>
-                    </button>
-                    <div class="faq-answer px-6 text-gray-400">
-                        Absolutely! Playturfy supports multiple tournament formats including Round Robin, Knockout, Group Stages, and Finals. You can create and manage complete tournaments with fixtures and standings.
-                    </div>
-                </div>
-                
-                <!-- FAQ 4 -->
-                <div class="faq-item bg-black rounded-2xl border border-gray-800 overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-900 transition">
-                        <span class="text-xl font-semibold">Can I upload player photos?</span>
-                        <i class="fas fa-chevron-down text-lime-500 transition-transform"></i>
-                    </button>
-                    <div class="faq-answer px-6 text-gray-400">
-                        Yes! You can add player photos to personalize your team roster and make your lineups more professional and engaging.
-                    </div>
-                </div>
-                
-                <!-- FAQ 5 -->
-                <div class="faq-item bg-black rounded-2xl border border-gray-800 overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-900 transition">
-                        <span class="text-xl font-semibold">How do team logos work?</span>
-                        <i class="fas fa-chevron-down text-lime-500 transition-transform"></i>
-                    </button>
-                    <div class="faq-answer px-6 text-gray-400">
-                        You have three options: upload custom logos from your device, pick from pre-loaded league collections, or choose from organized club logo folders. It's flexible and easy!
-                    </div>
-                </div>
-                
-                <!-- FAQ 6 -->
-                <div class="faq-item bg-black rounded-2xl border border-gray-800 overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-900 transition">
-                        <span class="text-xl font-semibold">Does it work offline?</span>
-                        <i class="fas fa-chevron-down text-lime-500 transition-transform"></i>
-                    </button>
-                    <div class="faq-answer px-6 text-gray-400">
-                        Yes! You can record matches offline, and your data will sync automatically when you're back online. Perfect for outdoor tournaments with limited connectivity.
-                    </div>
-                </div>
-                
-                <!-- FAQ 7 -->
-                <div class="faq-item bg-black rounded-2xl border border-gray-800 overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-900 transition">
-                        <span class="text-xl font-semibold">Is my data safe?</span>
-                        <i class="fas fa-chevron-down text-lime-500 transition-transform"></i>
-                    </button>
-                    <div class="faq-answer px-6 text-gray-400">
-                        Your data is securely stored using Firebase with industry-standard encryption. We never sell or share your personal information with third parties.
-                    </div>
-                </div>
-                
-                <!-- FAQ 8 -->
-                <div class="faq-item bg-black rounded-2xl border border-gray-800 overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-900 transition">
-                        <span class="text-xl font-semibold">Can I share match results?</span>
-                        <i class="fas fa-chevron-down text-lime-500 transition-transform"></i>
-                    </button>
-                    <div class="faq-answer px-6 text-gray-400">
-                        Yes! Generate beautiful match summary cards and share them directly to social media platforms or download them to your device.
-                    </div>
-                </div>
-                
-                <!-- FAQ 9 -->
-                <div class="faq-item bg-black rounded-2xl border border-gray-800 overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-900 transition">
-                        <span class="text-xl font-semibold">What devices are supported?</span>
-                        <i class="fas fa-chevron-down text-lime-500 transition-transform"></i>
-                    </button>
-                    <div class="faq-answer px-6 text-gray-400">
-                        Playturfy is optimized for all Android devices running Android 5.0 and above. We ensure smooth performance across all screen sizes.
-                    </div>
-                </div>
-                
-                <!-- FAQ 10 -->
-                <div class="faq-item bg-black rounded-2xl border border-gray-800 overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-900 transition">
-                        <span class="text-xl font-semibold">Can I track player statistics?</span>
-                        <i class="fas fa-chevron-down text-lime-500 transition-transform"></i>
-                    </button>
-                    <div class="faq-answer px-6 text-gray-400">
-                        Yes! Track goals, assists, cards, and appearances for each player. View detailed statistics and performance history.
-                    </div>
-                </div>
-                
-                <!-- FAQ 11 -->
-                <div class="faq-item bg-black rounded-2xl border border-gray-800 overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-900 transition">
-                        <span class="text-xl font-semibold">How do I get support?</span>
-                        <i class="fas fa-chevron-down text-lime-500 transition-transform"></i>
-                    </button>
-                    <div class="faq-answer px-6 text-gray-400">
-                        You can reach our support team through the contact form below or email us directly at turfy.sports@gmail.com. We typically respond within 24 hours.
-                    </div>
-                </div>
-                
-                <!-- FAQ 12 - NEW -->
-                <div class="faq-item bg-black rounded-2xl border border-gray-800 overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-900 transition">
-                        <span class="text-xl font-semibold">What is the Team Statistics Dashboard?</span>
-                        <i class="fas fa-chevron-down text-lime-500 transition-transform"></i>
-                    </button>
-                    <div class="faq-answer px-6 text-gray-400">
-                        The Team Statistics Dashboard provides comprehensive analytics including wins, losses, draws, goals scored/conceded, clean sheets, top scorers, assists leaders, form guide, scoring patterns (1st vs 2nd half goals), and recent match history. Perfect for coaches and team managers!
-                    </div>
-                </div>
-                
-                <!-- FAQ 13 - NEW -->
-                <div class="faq-item bg-black rounded-2xl border border-gray-800 overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-900 transition">
-                        <span class="text-xl font-semibold">Can I generate PDF reports of team statistics?</span>
-                        <i class="fas fa-chevron-down text-lime-500 transition-transform"></i>
-                    </button>
-                    <div class="faq-answer px-6 text-gray-400">
-                        Yes! Generate beautiful professional PDF reports with team statistics, top 8 scorers, key metrics, performance charts, and lime green themed design. Perfect for sharing with coaches, sponsors, or team members. Download and share instantly!
-                    </div>
-                </div>
-                
-                <!-- FAQ 14 - NEW -->
-                <div class="faq-item bg-black rounded-2xl border border-gray-800 overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-900 transition">
-                        <span class="text-xl font-semibold">What are guest players and how do they work?</span>
-                        <i class="fas fa-chevron-down text-lime-500 transition-transform"></i>
-                    </button>
-                    <div class="faq-answer px-6 text-gray-400">
-                        Guest players allow you to add players to matches and tournaments without requiring them to register. Their stats are tracked alongside registered players in team statistics and reports. Perfect for pickup games, community tournaments, and one-time participants!
-                    </div>
-                </div>
-                
-                <!-- FAQ 15 - NEW -->
-                <div class="faq-item bg-black rounded-2xl border border-gray-800 overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-900 transition">
-                        <span class="text-xl font-semibold">Are yellow and red cards tracked accurately?</span>
-                        <i class="fas fa-chevron-down text-lime-500 transition-transform"></i>
-                    </button>
-                    <div class="faq-answer px-6 text-gray-400">
-                        Yes! Yellow and red cards are tracked in real-time for all matches and tournaments. Cards automatically sync to team statistics and individual player records. View card history, disciplinary records, and track player suspensions easily.
-                    </div>
-                </div>
-                
-                <!-- FAQ 16 - NEW -->
-                <div class="faq-item bg-black rounded-2xl border border-gray-800 overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-900 transition">
-                        <span class="text-xl font-semibold">How fast is the app performance?</span>
-                        <i class="fas fa-chevron-down text-lime-500 transition-transform"></i>
-                    </button>
-                    <div class="faq-answer px-6 text-gray-400">
-                        Playturfy is 70% faster than before! Tournament match summaries now appear instantly with optimized background data synchronization. No more waiting - record, view, and share results immediately. Smooth performance on all Android devices.
-                    </div>
-                </div>
-                
-                <!-- FAQ 17 - NEW: Broadcasting -->
-                <div class="faq-item bg-black rounded-2xl border border-red-500 overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-900 transition">
-                        <span class="text-xl font-semibold">NEW: What is the Live Broadcasting feature?</span>
-                        <i class="fas fa-chevron-down text-red-500 transition-transform"></i>
-                    </button>
-                    <div class="faq-answer px-6 text-gray-400">
-                        The Live Broadcasting feature lets you stream tournament matches with a professional overlay to OBS, Streamlabs, XSplit, and other broadcasting software. Get real-time scoreboard with team logos, live scores, smart timer with half-time pause, extra time indicator, and match phase display. Perfect for streaming local tournaments!
-                    </div>
-                </div>
-                
-                <!-- FAQ 18 - NEW: Broadcasting Setup -->
-                <div class="faq-item bg-black rounded-2xl border border-red-500 overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-900 transition">
-                        <span class="text-xl font-semibold">NEW: How do I set up broadcasting?</span>
-                        <i class="fas fa-chevron-down text-red-500 transition-transform"></i>
-                    </button>
-                    <div class="faq-answer px-6 text-gray-400">
-                        Super easy! 1) Start your tournament match on mobile, 2) Tap the red cast icon (organizers only), 3) Copy the broadcast link, 4) Open OBS on your PC, 5) Add Browser Source and paste the link, 6) Set size to 1920x1080, 7) Done! Your overlay updates in real-time as you record match events on mobile.
-                    </div>
-                </div>
-                
-                <!-- FAQ 19 - NEW: Broadcasting Compatibility -->
-                <div class="faq-item bg-black rounded-2xl border border-red-500 overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-900 transition">
-                        <span class="text-xl font-semibold">NEW: What broadcasting software is supported?</span>
-                        <i class="fas fa-chevron-down text-red-500 transition-transform"></i>
-                    </button>
-                    <div class="faq-answer px-6 text-gray-400">
-                        Works with any software that supports browser sources: OBS Studio (free, recommended), Streamlabs Desktop, XSplit Broadcaster, vMix, Wirecast, Restream Studio, StreamYard, Lightstream, Prism Live Studio, and more! If it can display a web page, it can display your overlay.
-                    </div>
-                </div>
-                
-                <!-- FAQ 20 - NEW: Broadcasting Access -->
-                <div class="faq-item bg-black rounded-2xl border border-red-500 overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-900 transition">
-                        <span class="text-xl font-semibold">NEW: Who can use the broadcasting feature?</span>
-                        <i class="fas fa-chevron-down text-red-500 transition-transform"></i>
-                    </button>
-                    <div class="faq-answer px-6 text-gray-400">
-                        Only tournament organizers (the person who created the tournament) can access broadcasting controls. This ensures secure access and prevents unauthorized streaming. If you created the tournament, you'll see a red cast icon on match cards - tap it to get your broadcast link!
-                    </div>
-                </div>
-            </div>
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">Clear answers to what players and organizers ask most before downloading.</p>
         </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is Turfy really 100% free?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, completely free. There are no subscriptions, no in-app purchases, and zero ads. All features including live match scoring, tournament brackets, player stats, PDF reports, and OBS broadcasting overlays are free forever.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Does Turfy work offline without internet?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. You can score matches and manage tournaments on outdoor pitches with zero mobile signal. Everything saves locally on your phone and automatically syncs to the cloud whenever you reconnect.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Which tournament formats are supported?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Turfy supports Round Robin (league format), Knockout (single elimination), Group Stages with knockout playoffs, and Finals. Fixtures generate automatically, and standings tables update the moment every match ends.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is there an iPhone / iOS version?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Turfy is currently available for Android devices (Android 5.0+). An iPhone / iOS version is actively in development. You can join the iPhone waitlist on this page to get notified the day it launches on the Apple App Store.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How does the OBS broadcasting scoreboard work?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Organizers can generate a live broadcast link directly from the app. Simply paste the link into OBS Studio, Streamlabs, or vMix as a Browser Source. The scoreboard overlay updates live on your stream whenever you tap a goal or card on your phone.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I export match reports and player stats to PDF?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Turfy generates professional PDF match reports and player statistics in one tap, ready to print or share with coaches, team sponsors, and league officials via WhatsApp or email.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 px-6 bg-black">
-        <div class="container mx-auto max-w-2xl">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Get In <span class="text-lime-500">Touch</span></h2>
-                <p class="text-xl text-gray-400">Have questions? We'd love to hear from you</p>
+    <!-- Final CTA Banner with QR Code -->
+    <section class="final-cta">
+      <div class="container">
+        <div class="final-cta-box">
+          <div>
+            <h2 class="final-cta-title">Your next matchday <span class="lime">starts here.</span></h2>
+            <p class="final-cta-desc">Join grassroots footballers, team captains, and tournament organizers worldwide who trust Turfy. Free forever. No ads. Works offline.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center;">
+              <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website%26utm_medium=final_cta" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 onclick="trackDownload('final_cta')"
+                 class="btn btn-lime btn-lg">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.793 12 3.61 22.186a1.99 1.99 0 01-.61-.954V2.768c.178-.387.41-.703.61-.954zm11.602 11.602l2.36 2.36-12.78 7.378 10.42-9.738zm0-2.832L4.79 1.846l12.78 7.378-2.36 2.36zm1.414 1.416l3.784-2.185c1.077-.621 1.077-1.637 0-2.258l-3.784-2.185-2.072 2.072 2.072 2.556z"/></svg>
+                Get Turfy Free on Google Play
+              </a>
+              <button type="button" class="btn btn-ghost btn-lg" data-open-waitlist>
+                Join iPhone Waitlist
+              </button>
             </div>
-            
-            <form id="contact-form" action="https://formsubmit.co/turfy.sports@gmail.com" method="POST" class="space-y-6">
-                <!-- FormSubmit Configuration -->
-                <input type="hidden" name="_subject" value="New Contact Form Submission from Playturfy Website">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="text" name="_honey" style="display:none">
-                
-                <div>
-                    <label class="block text-sm font-semibold mb-2">Name</label>
-                    <input type="text" name="name" required class="w-full bg-gray-900 border border-gray-800 rounded-xl px-6 py-4 focus:outline-none focus:border-lime-500 transition">
-                </div>
-                
-                <div>
-                    <label class="block text-sm font-semibold mb-2">Email</label>
-                    <input type="email" name="email" required class="w-full bg-gray-900 border border-gray-800 rounded-xl px-6 py-4 focus:outline-none focus:border-lime-500 transition">
-                </div>
-                
-                <div>
-                    <label class="block text-sm font-semibold mb-2">Message</label>
-                    <textarea name="message" required rows="6" class="w-full bg-gray-900 border border-gray-800 rounded-xl px-6 py-4 focus:outline-none focus:border-lime-500 transition resize-none"></textarea>
-                </div>
-                
-                <button type="submit" class="w-full bg-lime-500 text-black px-8 py-4 rounded-xl font-semibold hover:bg-lime-400 transition">
-                    Send Message
-                </button>
-            </form>
-            
-            <div class="mt-12 text-center">
-                <p class="text-gray-400 mb-2">Or email us directly at:</p>
-                <a href="mailto:turfy.sports@gmail.com" class="text-lime-500 text-xl font-semibold hover:text-lime-400 transition">
-                    turfy.sports@gmail.com
-                </a>
-            </div>
+          </div>
+
+          <div class="qr-box">
+            <img src="assets/optimized/qr-download.png" alt="Scan QR code to install Turfy" class="qr-img" width="140" height="140" loading="lazy">
+            <span class="qr-label">Scan with phone to install</span>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 py-12 px-6 border-t border-gray-800">
-        <div class="container mx-auto">
-            <div class="grid md:grid-cols-3 gap-12 mb-8">
-                <!-- Left -->
-                <div>
-                    <div class="mb-4">
-                        <img src="assets/newlogo.png" alt="Playturfy Logo" class="h-16 w-auto object-contain drop-shadow-2xl">
-                    </div>
-                    <p class="text-gray-400">Your game. Your stats. Your story.</p>
-                </div>
-                
-                <!-- Middle -->
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-400">Home</a></li>
-                        <li><a href="#features" class="text-gray-400">Features</a></li>
-                        <li><a href="#screenshots" class="text-gray-400">Screenshots</a></li>
-                        <li><a href="#download" class="text-gray-400">Download</a></li>
-                        <li><a href="#contact" class="text-gray-400">Contact</a></li>
-                        <li><a href="privacy.html" class="text-gray-400">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="text-gray-400">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Right -->
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Download & Connect</h3>
-                    <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-lime-500 text-black px-6 py-3 rounded-xl font-semibold mb-6">
-                        <i class="fab fa-google-play"></i>
-                        <span>Play Store</span>
-                    </a>
-                    
-                    <div class="flex space-x-4 mt-4">
-                        <a href="https://www.facebook.com/share/1SPFLM9UzT/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-lime-500 hover:text-black transition">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.instagram.com/playturfy/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-lime-500 hover:text-black transition">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://x.com/PlayTurfy" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-lime-500 hover:text-black transition">
-                            <i class="fab fa-x-twitter"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Playturfy. All rights reserved.</p>
-            </div>
+    <!-- Contact Form (Fixed so submissions actually deliver via FormSubmit) -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 40px;">
+          <span class="section-tag">Support &amp; Feedback</span>
+          <h2 class="section-title">Get in touch with the team.</h2>
+          <p class="section-desc">Have a question, tournament feature request, or feedback? We read every message.</p>
         </div>
-    </footer>
 
-    <script src="js/script.js?v=2.0"></script>
+        <div class="contact-grid">
+          <form class="contact-form" action="https://formsubmit.co/turfy.sports@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Inquiry from Playturfy Website">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Your Name</label>
+              <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Alex" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Email Address</label>
+              <input type="email" id="contact-email" name="email" class="form-input" placeholder="alex@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Message</label>
+              <textarea id="contact-message" name="message" class="form-textarea" placeholder="Tell us about your team, tournament, or question..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-lime btn-lg" style="width: 100%;">
+              Send Message
+            </button>
+          </form>
+
+          <div class="contact-direct">
+            Or email us directly at <a href="mailto:turfy.sports@gmail.com">turfy.sports@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/brand-logo.svg" alt="Turfy Logo" class="brand-logo" width="144" height="36">
+          <p>The free football match and tournament tracker for grassroots football worldwide.</p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">App</div>
+          <ul class="footer-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#roles">Who it's for</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer" target="_blank" rel="noopener noreferrer">Google Play Store</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Content &amp; Legal</div>
+          <ul class="footer-links">
+            <li><a href="news.html">Football News</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="#contact">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 14px;">Follow Turfy on social media for app updates &amp; grassroots highlights.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/share/1SPFLM9UzT/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/playturfy/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://x.com/PlayTurfy" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Playturfy. All rights reserved.</div>
+        <div style="color: var(--text-dim); font-size: 0.82rem;">Score matches. Run tournaments. Track your stats.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Download Bar -->
+  <div class="mobile-sticky-bar" aria-label="Quick download">
+    <div class="mobile-sticky-inner">
+      <div class="mobile-sticky-text">
+        <strong>Turfy</strong>
+        <span>Free · No ads · Offline</span>
+      </div>
+      <a id="sticky-download-btn"
+         href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website%26utm_medium=sticky_mobile" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         onclick="trackDownload('sticky_mobile')"
+         class="btn btn-lime btn-sm">
+        Download App
+      </a>
+    </div>
+  </div>
+
+  <!-- iPhone Waitlist Modal -->
+  <div id="waitlist-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="waitlist-title">
+    <div class="modal-box">
+      <button id="waitlist-close" class="modal-close" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div style="margin-bottom: 20px;">
+        <span class="section-tag">Coming Soon</span>
+        <h3 id="waitlist-title" style="font-size: 1.6rem; margin-top: 10px; margin-bottom: 8px;">Turfy for iPhone</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Enter your email and we'll notify you the moment the iOS version launches on the Apple App Store. No spam, ever.</p>
+      </div>
+
+      <form action="https://formsubmit.co/turfy.sports@gmail.com" method="POST" style="display: flex; flex-direction: column; gap: 14px;">
+        <input type="hidden" name="_subject" value="New iPhone Waitlist Signup for Turfy">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="form-group">
+          <label for="waitlist-email" class="form-label">Email Address</label>
+          <input type="email" id="waitlist-email" name="email" class="form-input" placeholder="you@example.com" required>
+        </div>
+
+        <button type="submit" class="btn btn-lime btn-lg" style="width: 100%;">
+          Notify Me at Launch
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

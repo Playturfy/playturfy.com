@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found – Turfy</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .not-found-container {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .not-found-code {
+      font-size: clamp(5rem, 15vw, 9rem);
+      font-weight: 800;
+      color: var(--primary, #C6F432);
+      line-height: 1;
+      margin-bottom: 1rem;
+      letter-spacing: -0.04em;
+    }
+    .not-found-title {
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .not-found-text {
+      color: #999;
+      max-width: 460px;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <img src="assets/brand-logo.svg" alt="Turfy Logo" class="logo-img" width="120" height="36">
+      </a>
+      <a href="index.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Home</a>
+    </div>
+  </header>
+
+  <main class="not-found-container">
+    <div class="not-found-code">404</div>
+    <h1 class="not-found-title">Out of Bounds!</h1>
+    <p class="not-found-text">The match has moved or the page you are looking for doesn't exist on this pitch.</p>
+    <a href="index.html" class="btn btn-primary">Return to Pitch</a>
+  </main>
+</body>
+</html>

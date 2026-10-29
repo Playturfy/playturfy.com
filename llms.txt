@@ -1,0 +1,21 @@
+# Turfy
+
+> Free football match live scoring, tournament management, and player stats tracker. 100% free forever, no ads, works offline.
+
+- Website: https://playturfy.com/
+- Google Play Store: https://play.google.com/store/apps/details?id=com.turfy.matchscorer
+- Platform: Android (Android 5.0+) — iOS version in active development
+- Pricing: Free forever, no subscriptions, no in-app purchases, zero ads
+
+## Core Features
+- **Live Match Scoring**: Record goals, assists, yellow/red cards, substitutions, and penalties with live timers.
+- **Tournament Management**: Automatic fixture generation and real-time standings for Round Robin, Knockouts, and Group Stages.
+- **Player & Team Statistics**: Automatic career and tournament tracking for top scorers, assists, cards, and clean sheets.
+- **Offline First**: Full offline functionality for pitches with weak or no mobile signal; automatic cloud sync when reconnected.
+- **Live Broadcasting Overlay**: Transparent browser overlay URL for OBS Studio, vMix, and live streaming software.
+- **Instant Match Reports**: One-tap export to clean PDF match sheets and social media graphic cards.
+
+## Frequently Asked Questions
+- **Is Turfy free?** Yes, 100% free forever with no paywalls or advertising.
+- **Does it work without internet?** Yes, match scoring and tournament brackets work completely offline.
+- **Who is it for?** Grassroots football teams, academy coaches, community leagues, street football organizers, and recreational players.

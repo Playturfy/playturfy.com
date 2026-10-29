@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="none" width="160" height="40">
+  <!-- Turfy App Icon / Pitch Mark -->
+  <rect x="2" y="4" width="32" height="32" rx="8" fill="#C6F432"/>
+  <!-- Pitch Lines inside icon -->
+  <rect x="7" y="9" width="22" height="22" rx="2" stroke="#0E0E0E" stroke-width="1.5" fill="none"/>
+  <line x1="7" y1="20" x2="29" y2="20" stroke="#0E0E0E" stroke-width="1.5"/>
+  <circle cx="18" cy="20" r="3.5" stroke="#0E0E0E" stroke-width="1.5" fill="none"/>
+  <rect x="12" y="9" width="12" height="4" stroke="#0E0E0E" stroke-width="1.2" fill="none"/>
+  <rect x="12" y="27" width="12" height="4" stroke="#0E0E0E" stroke-width="1.2" fill="none"/>
+
+  <!-- Turfy Wordmark (clean, crisp, non-stretched) -->
+  <text x="44" y="27" fill="#FFFFFF" font-family="'Plus Jakarta Sans', 'Outfit', system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" letter-spacing="-0.02em">TURFY<tspan fill="#C6F432">.</tspan></text>
+</svg>
