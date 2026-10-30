@@ -151,6 +151,71 @@
     }
   }
 
-  // 8. Contact Form - submits to formsubmit.co naturally, no e.preventDefault() blocking it
-  // (We do not interfere so messages are safely delivered to turfy.sports@gmail.com)
+  // 8. Contact & Waitlist Forms - Asynchronous submission (Prevents redirect & Cloudflare 521 crashes)
+  function handleFormSubmission(form, successMsg) {
+    if (!form) return;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalHtml = submitBtn ? submitBtn.innerHTML : 'Submit';
+
+      let statusEl = form.querySelector('.form-status');
+      if (!statusEl) {
+        statusEl = document.createElement('div');
+        statusEl.className = 'form-status';
+        form.appendChild(statusEl);
+      }
+      statusEl.style.display = 'none';
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+      }
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/turfy.sports@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json'
+          },
+          body: formData
+        });
+
+        if (response.ok) {
+          form.reset();
+          statusEl.className = 'form-status form-success';
+          statusEl.textContent = successMsg || '✓ Message sent successfully! We will get back to you soon.';
+          statusEl.style.display = 'block';
+        } else {
+          throw new Error('Server returned ' + response.status);
+        }
+      } catch (err) {
+        const nameVal = formData.get('name') || '';
+        const msgVal = formData.get('message') || formData.get('email') || '';
+        const mailtoUrl = `mailto:turfy.sports@gmail.com?subject=Inquiry from ${encodeURIComponent(nameVal || 'Playturfy Website')}&body=${encodeURIComponent(msgVal)}`;
+        
+        statusEl.className = 'form-status form-error';
+        statusEl.innerHTML = `Message service is temporarily busy. <a href="${mailtoUrl}" style="color: var(--lime); text-decoration: underline; font-weight: 600;">Click here to send directly via Email</a>`;
+        statusEl.style.display = 'block';
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalHtml;
+        }
+      }
+    });
+  }
+
+  handleFormSubmission(
+    document.querySelector('.contact-form'),
+    '✓ Thank you! Your message has been sent to the Turfy team.'
+  );
+
+  const waitlistForm = document.querySelector('#waitlist-modal form');
+  handleFormSubmission(
+    waitlistForm,
+    '✓ You’re on the waitlist! We’ll notify you when the iOS app launches.'
+  );
 })();
