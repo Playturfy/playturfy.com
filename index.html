@@ -51,6 +51,13 @@
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-L299SZQPMC"></script>
   <script>
+    if (window.location.pathname.endsWith('/index.html')) {
+      window.history.replaceState(
+        null,
+        '',
+        (window.location.pathname.slice(0, -10) || '/') + window.location.search + window.location.hash
+      );
+    }
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -174,6 +181,22 @@
           "@type": "Answer",
           "text": "Yes. Turfy generates professional PDF match reports and player statistics in one tap, ready to print or share with coaches, team sponsors, and league officials via WhatsApp or email."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use Turfy for 5-a-side, 7-a-side, futsal, and turf matches?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Turfy supports 5-a-side, 6-a-side, 7-a-side, 8-a-side, 9-a-side, futsal, astro-turf cages, street football, and full 11v11 matches with customizable half durations, team sizes, and rolling substitutions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do players and fans follow live scores and tournament tables?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As the scorer logs goals, assists, and cards on the pitch, live scores, league standings, knockout brackets, and Golden Boot top-scorer leaderboards update automatically. You can also share visual match summary cards directly to WhatsApp and Instagram."
+        }
       }
     ]
   }
@@ -184,8 +207,8 @@
   <!-- Header -->
   <header id="header">
     <div class="container header-nav">
-      <a href="index.html" class="brand-link" aria-label="Turfy Homepage">
-        <img src="assets/brand-logo.svg" alt="Turfy Logo" class="brand-logo" width="144" height="36">
+      <a href="/" class="brand-link" aria-label="Turfy Homepage">
+        <img src="assets/brand-logo.svg" alt="Turfy Logo" class="brand-logo" width="105" height="38">
       </a>
 
       <nav aria-label="Main navigation">
@@ -681,6 +704,26 @@
               <p>Yes. Turfy generates professional PDF match reports and player statistics in one tap, ready to print or share with coaches, team sponsors, and league officials via WhatsApp or email.</p>
             </div>
           </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I use Turfy for 5-a-side, 7-a-side, futsal, and turf matches?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Turfy supports 5-a-side, 6-a-side, 7-a-side, 8-a-side, 9-a-side, futsal, astro-turf cages, street football, and full 11v11 matches with customizable half durations, team sizes, and rolling substitutions.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How do players and fans follow live scores and tournament tables?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>As the scorer logs goals, assists, and cards on the pitch, live scores, league standings, knockout brackets, and Golden Boot top-scorer leaderboards update automatically. You can also share visual match summary cards directly to WhatsApp and Instagram.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -764,7 +807,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/brand-logo.svg" alt="Turfy Logo" class="brand-logo" width="144" height="36">
+          <img src="assets/brand-logo.svg" alt="Turfy Logo" class="brand-logo" width="105" height="38">
           <p>The free football match and tournament tracker for grassroots football worldwide.</p>
         </div>
 

@@ -43,29 +43,37 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-L299SZQPMC');
+
+    function trackDownload(location) {
+      gtag('event', 'download_click', {
+        'event_category': 'conversion',
+        'event_label': location,
+        'value': 1
+      });
+    }
   </script>
 </head>
 
 <body>
   <header id="header">
     <div class="container header-nav">
-      <a href="index.html" class="brand-link" aria-label="Turfy Homepage">
-        <img src="assets/brand-logo.svg" alt="Turfy Logo" class="brand-logo" width="144" height="36">
+      <a href="/" class="brand-link" aria-label="Turfy Homepage">
+        <img src="assets/brand-logo.svg" alt="Turfy Logo" class="brand-logo" width="105" height="38">
       </a>
 
       <nav aria-label="Main navigation">
         <ul class="nav-links">
-          <li><a href="index.html#features">Features</a></li>
-          <li><a href="index.html#roles">Who it's for</a></li>
-          <li><a href="index.html#how-it-works">How it works</a></li>
-          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="/#features">Features</a></li>
+          <li><a href="/#roles">Who it's for</a></li>
+          <li><a href="/#how-it-works">How it works</a></li>
+          <li><a href="/#faq">FAQ</a></li>
           <li><a href="news.html" style="color: var(--lime); font-weight: 700;">News</a></li>
         </ul>
       </nav>
 
       <div class="nav-actions">
         <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website%26utm_medium=news_header" 
-           target="_blank" rel="noopener noreferrer" class="btn btn-lime btn-sm">
+           target="_blank" rel="noopener noreferrer" onclick="trackDownload('news_header')" class="btn btn-lime btn-sm">
           Download Free
         </a>
         <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
@@ -76,12 +84,12 @@
 
     <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
       <ul class="mobile-drawer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#features">Features</a></li>
-        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#features">Features</a></li>
+        <li><a href="/#faq">FAQ</a></li>
         <li><a href="news.html">Football News</a></li>
       </ul>
-      <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer" class="btn btn-lime btn-lg" style="width:100%;">Get Turfy on Google Play</a>
+      <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website%26utm_medium=news_drawer" target="_blank" rel="noopener noreferrer" onclick="trackDownload('news_drawer')" class="btn btn-lime btn-lg" style="width:100%;">Get Turfy on Google Play</a>
     </div>
   </header>
 
@@ -119,7 +127,7 @@
         <h2 style="font-size: 2.2rem; margin-bottom: 12px;">Get live match scores on your phone</h2>
         <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">Download Turfy to score matches live, follow local tournaments, and track player stats. Free forever.</p>
         <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website%26utm_medium=news_bottom" 
-           target="_blank" rel="noopener noreferrer" class="btn btn-lime btn-lg">
+           target="_blank" rel="noopener noreferrer" onclick="trackDownload('news_bottom')" class="btn btn-lime btn-lg">
           Download Turfy Free
         </a>
       </div>
@@ -131,7 +139,7 @@
       <div class="footer-bottom" style="border: none; padding-top: 0;">
         <div>&copy; 2026 Playturfy. All rights reserved.</div>
         <div style="display: flex; gap: 20px;">
-          <a href="index.html" style="color: var(--text-muted);">Home</a>
+          <a href="/" style="color: var(--text-muted);">Home</a>
           <a href="privacy.html" style="color: var(--text-muted);">Privacy</a>
           <a href="terms.html" style="color: var(--text-muted);">Terms</a>
         </div>

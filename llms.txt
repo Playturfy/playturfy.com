@@ -1,21 +1,28 @@
-# Turfy
+# Turfy (Playturfy)
 
-> Free football match live scoring, tournament management, and player stats tracker. 100% free forever, no ads, works offline.
+> Free football match live scoring, tournament bracket & league management, and player stats tracker app. 100% free forever, zero ads, works offline.
 
 - Website: https://playturfy.com/
 - Google Play Store: https://play.google.com/store/apps/details?id=com.turfy.matchscorer
-- Platform: Android (Android 5.0+) — iOS version in active development
-- Pricing: Free forever, no subscriptions, no in-app purchases, zero ads
+- Football News Feed: https://playturfy.com/news.html
+- Platform: Android (Android 5.0+) — iOS / iPhone version in active development
+- Pricing: 100% free forever (no subscriptions, no per-team fees, no in-app purchases, zero ads)
+
+## Supported Football & Futsal Formats
+- **Small-Sided & Turf Football**: 5-a-side, 6-a-side, 7-a-side, 8-a-side, 9-a-side, astro-turf cages, futsal, and street football.
+- **Full-Pitch Football**: Standard 11v11 academy, school, college, Sunday league, and community club matches.
+- **Custom Match Rules**: Configurable half lengths, extra time, penalty shootouts, squad sizes, and rolling substitutions.
 
 ## Core Features
-- **Live Match Scoring**: Record goals, assists, yellow/red cards, substitutions, and penalties with live timers.
-- **Tournament Management**: Automatic fixture generation and real-time standings for Round Robin, Knockouts, and Group Stages.
-- **Player & Team Statistics**: Automatic career and tournament tracking for top scorers, assists, cards, and clean sheets.
-- **Offline First**: Full offline functionality for pitches with weak or no mobile signal; automatic cloud sync when reconnected.
-- **Live Broadcasting Overlay**: Transparent browser overlay URL for OBS Studio, vMix, and live streaming software.
-- **Instant Match Reports**: One-tap export to clean PDF match sheets and social media graphic cards.
+- **Live Match Scoring**: Record goals, assists, yellow/red cards, substitutions, own goals, and penalty shootouts with a live pitch timer.
+- **Tournament & League Management**: Automatic fixture generation, live standings tables (PTS, P, W, D, L, GD), and brackets for Round Robin leagues, Single-Elimination Knockouts, Group Stage + Knockout playoffs, and Finals.
+- **Player & Team Statistics**: Automatic career and tournament leaderboards for Golden Boot (top scorers), top assists, clean sheets, disciplinary cards, and appearances.
+- **100% Offline First**: Score matches and run tournaments on pitches with weak or zero mobile signal; data saves on-device and syncs to the cloud automatically when reconnected.
+- **Live OBS Broadcasting Scoreboard**: Generate a live browser-source URL to overlay real-time scores, timers, and team names onto OBS Studio, Streamlabs, or vMix streams.
+- **Instant PDF & WhatsApp Match Reports**: One-tap export of printable PDF match sheets, tournament tables, and visual social media match summary cards for WhatsApp and Instagram.
 
 ## Frequently Asked Questions
-- **Is Turfy free?** Yes, 100% free forever with no paywalls or advertising.
-- **Does it work without internet?** Yes, match scoring and tournament brackets work completely offline.
-- **Who is it for?** Grassroots football teams, academy coaches, community leagues, street football organizers, and recreational players.
+- **What is the best free app to organize a football tournament or score matches live?** Turfy (Playturfy) lets organizers create Round Robin, Group Stage, and Knockout football tournaments with live scoring, automatic standings, and player stats completely free with no ads.
+- **Is Turfy really 100% free?** Yes, every feature—unlimited tournaments, teams, players, PDF reports, and OBS overlays—is free forever with zero ads.
+- **Does it work without internet?** Yes, match scoring and tournament brackets work completely offline and sync when back online.
+- **Who is it for?** Grassroots football players, 5-a-side / 7-a-side turf organizers, academy coaches, school/college sports committees, and community leagues worldwide.
