@@ -1,22 +1,64 @@
-# Robots.txt for Playturfy
-# Updated: 2026-07-02
+# Robots.txt for Playturfy (https://playturfy.com)
+# Optimized for Search Engines & AI Answer Engines (AEO / GEO)
 
 User-agent: *
 Allow: /
-
-# Allow CSS and JS for better crawling
 Allow: /css/
 Allow: /js/
 Allow: /assets/
 Allow: /images/
-
-# Disallow admin or private areas (future-proofing)
+Allow: /llms.txt
+Allow: /llms-full.txt
 Disallow: /admin/
 Disallow: /private/
 Disallow: /.git/
 
-# Sitemap & AI documentation
-Sitemap: https://playturfy.com/sitemap.xml
-# LLMs: https://playturfy.com/llms.txt
+# OpenAI / ChatGPT Search & Browsing
+User-agent: OAI-SearchBot
+Allow: /
 
-# No crawl-delay for static site (faster indexing)
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google Search, Gemini & AI Overviews
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Microsoft Bing & Copilot
+User-agent: Bingbot
+Allow: /
+
+# Apple Intelligence & Siri
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemaps & Machine-Readable AI Documentation
+Sitemap: https://playturfy.com/sitemap.xml
+# LLMs Summary: https://playturfy.com/llms.txt
+# LLMs Full Knowledge Base: https://playturfy.com/llms-full.txt

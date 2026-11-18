@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Not Found – Turfy</title>
   <meta name="robots" content="noindex, follow">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="icons/favicon.svg?v=2">
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png?v=2">
+  <link rel="stylesheet" href="css/style.css?v=7">
   <style>
     .not-found-container {
       min-height: 80vh;
@@ -47,12 +45,14 @@
   </style>
 </head>
 <body class="bg-black text-white">
-  <header class="header">
-    <div class="header-container">
-      <a href="/" class="logo">
-        <img src="assets/brand-logo.svg" alt="Turfy Logo" class="logo-img" width="120" height="36">
+  <header id="header">
+    <div class="container header-nav">
+      <a href="index.html" class="brand-link" aria-label="Turfy Homepage">
+        <img src="assets/brand-logo.svg" alt="Turfy Logo" class="brand-logo" width="105" height="38">
       </a>
-      <a href="/" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Home</a>
+      <div class="nav-actions">
+        <a href="index.html" class="btn btn-lime btn-sm">Home</a>
+      </div>
     </div>
   </header>
 
@@ -60,7 +60,7 @@
     <div class="not-found-code">404</div>
     <h1 class="not-found-title">Out of Bounds!</h1>
     <p class="not-found-text">The match has moved or the page you are looking for doesn't exist on this pitch.</p>
-    <a href="/" class="btn btn-primary">Return to Pitch</a>
+    <a href="index.html" class="btn btn-lime btn-lg">Return to Pitch</a>
   </main>
 </body>
 </html>

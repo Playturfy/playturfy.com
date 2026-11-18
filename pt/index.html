@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turfy – Aplicativo Gratuito para Marcar Jogos e Torneios de Futebol, Society e Futsal</title>
+  <meta name="title" content="Turfy – Aplicativo Gratuito para Marcar Jogos e Torneios de Futebol, Society e Futsal">
+  <meta name="description"
+    content="Marque partidas de futebol ao vivo, crie tabelas e chaves de campeonatos (3 a 32 times), acompanhe estatísticas de jogadores e transmita com placar OBS. 100% grátis, sem anúncios, funciona offline para Society 7x7, Futsal e Campo.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://playturfy.com/pt/">
+  <link rel="alternate" hreflang="en" href="https://playturfy.com/">
+  <link rel="alternate" hreflang="pt" href="https://playturfy.com/pt/">
+  <link rel="alternate" hreflang="es" href="https://playturfy.com/es/">
+  <link rel="alternate" hreflang="x-default" href="https://playturfy.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://playturfy.com/pt/">
+  <meta property="og:title" content="Turfy – App Grátis de Placar ao Vivo e Campeonatos de Futebol">
+  <meta property="og:description"
+    content="Crie campeonatos de 3 a 32 times, marque gols e assistências no Society, Futsal e Campo, e transmita com placar ao vivo no OBS Studio. 100% gratuito e offline.">
+  <meta property="og:image" content="https://playturfy.com/images/og-share.png">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="icon" type="image/svg+xml" href="../icons/favicon.svg?v=2">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico?v=2">
+  <link rel="stylesheet" href="../css/style.css?v=7">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L299SZQPMC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-L299SZQPMC');
+    function trackDownload(location) {
+      gtag('event', 'download_click', { 'event_category': 'conversion', 'event_label': location, 'value': 1 });
+    }
+  </script>
+</head>
+
+<body>
+  <header id="header">
+    <div class="container header-nav">
+      <a href="index.html" class="brand-link" aria-label="Turfy Início">
+        <img src="../assets/brand-logo.svg" alt="Turfy Logo" class="brand-logo" width="105" height="38">
+      </a>
+      <nav aria-label="Navegação principal">
+        <ul class="nav-links">
+          <li><a href="#tournament-calculator">Simulador de Torneios</a></li>
+          <li><a href="../tournament-maker.html">Brackets (EN)</a></li>
+          <li><a href="../obs-football-overlay.html">OBS Overlay</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website_pt%26utm_medium=header_btn"
+          target="_blank" rel="noopener noreferrer" onclick="trackDownload('pt_header')" class="btn btn-lime btn-sm">
+          Baixar Grátis
+        </a>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+      <ul class="mobile-drawer-links">
+        <li><a href="../index.html">Início (Global)</a></li>
+        <li><a href="#tournament-calculator">Simulador de Torneios</a></li>
+        <li><a href="../tournament-maker.html">Brackets (EN)</a></li>
+        <li><a href="../obs-football-overlay.html">OBS Overlay</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="section-tag">Futebol Society 7x7 · Futsal 5x5 · Campo 11x11</span>
+          <h1 class="hero-title">
+            Marque jogos ao vivo.<br>
+            Crie campeonatos.<br>
+            <span class="lime">Registre cada estatística.</span>
+          </h1>
+          <p class="hero-desc">
+            O aplicativo 100% gratuito para <strong>peladas, Futebol Society (7x7), Futsal (5x5), escolinhas e ligas
+              amadoras</strong>. Gere tabelas de grupos e mata-mata de 3 a 32 times, transmita com placar no OBS e use
+            mesmo sem internet.
+          </p>
+          <div class="hero-format-pills">
+            <span class="format-pill"><span class="dot"></span> Campeonatos de 3 a 32 Times</span>
+            <span class="format-pill"><span class="dot"></span> Funciona 100% Offline</span>
+            <span class="format-pill"><span class="dot"></span> Placar ao Vivo para OBS Studio</span>
+            <span class="format-pill"><span class="dot"></span> Society · Futsal · Campo</span>
+          </div>
+          <div class="hero-ctas">
+            <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website_pt%26utm_medium=hero_primary"
+              target="_blank" rel="noopener noreferrer" onclick="trackDownload('pt_hero')" class="btn btn-lime btn-lg">
+              Baixar Grátis no Google Play →
+            </a>
+          </div>
+          <div class="hero-rating-chip">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <span class="rating-text"><strong>5.0</strong> no Google Play · 100% Grátis · Sem Anúncios</span>
+          </div>
+        </div>
+        <div class="phone-mockup">
+          <div class="phone-frame">
+            <picture style="display: contents;">
+              <source type="image/avif" srcset="../assets/optimized/hero-phone.avif">
+              <source type="image/webp" srcset="../assets/optimized/hero-phone.webp">
+              <img src="../assets/optimized/hero-phone.png" alt="Aplicativo Turfy Placar e Campeonatos de Futebol"
+                class="phone-screen" width="310" height="656">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="calc-section" id="tournament-calculator">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Simulador de Chaveamento</span>
+          <h2 class="section-title">Torneios Automáticos de 3 a 32 Times</h2>
+          <p class="section-desc">Escolha o número de equipes para ver os grupos, classificação automática e mata-mata.</p>
+        </div>
+        <div class="calc-card">
+          <div class="calc-controls">
+            <div class="calc-top-row">
+              <div class="calc-team-display">
+                <span class="calc-team-num" id="calc-team-num">28</span>
+                <span class="calc-team-label">Times</span>
+              </div>
+              <div class="calc-presets">
+                <button type="button" class="calc-preset-btn" data-teams="8">8</button>
+                <button type="button" class="calc-preset-btn" data-teams="12">12</button>
+                <button type="button" class="calc-preset-btn" data-teams="16">16</button>
+                <button type="button" class="calc-preset-btn" data-teams="24">24</button>
+                <button type="button" class="calc-preset-btn active" data-teams="28">28</button>
+                <button type="button" class="calc-preset-btn" data-teams="32">32</button>
+              </div>
+            </div>
+            <input type="range" id="calc-team-slider" class="calc-slider" min="3" max="32" value="28"
+              aria-label="Número de times">
+          </div>
+          <div class="calc-results-grid">
+            <div class="calc-stat-box">
+              <div class="calc-stat-label">Formato</div>
+              <div class="calc-stat-value" id="calc-format-val">7 Groups + Knockout</div>
+              <div class="calc-stat-sub" id="calc-format-sub">16-team knockout bracket</div>
+            </div>
+            <div class="calc-stat-box">
+              <div class="calc-stat-label">Fase de Grupos</div>
+              <div class="calc-stat-value" id="calc-group-val">42 Matches</div>
+              <div class="calc-stat-sub" id="calc-group-sub">7 groups of 4 teams</div>
+            </div>
+            <div class="calc-stat-box">
+              <div class="calc-stat-label">Mata-Mata</div>
+              <div class="calc-stat-value" id="calc-knockout-val">15 Matches</div>
+              <div class="calc-stat-sub" id="calc-knockout-sub">R16 (8) → QF (4) → SF (2) → Final (1)</div>
+            </div>
+            <div class="calc-stat-box">
+              <div class="calc-stat-label">Total de Jogos</div>
+              <div class="calc-stat-value lime" id="calc-total-val">57 Matches</div>
+              <div class="calc-stat-sub" id="calc-total-sub">42 group + 15 knockout</div>
+            </div>
+          </div>
+          <div class="calc-flow-banner">
+            <div class="calc-flow-text">
+              <div class="calc-flow-title" id="calc-rule-title">Regra de Classificação:</div>
+              <p class="calc-flow-desc" id="calc-rule-desc"></p>
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website_pt%26utm_medium=calc_cta"
+              target="_blank" rel="noopener noreferrer" onclick="trackDownload('pt_calc')" class="btn btn-lime btn-sm">
+              Criar Campeonato Grátis →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 Playturfy · <a href="../index.html" class="lime">English</a> · <a href="../es/index.html">Español</a></div>
+        <div>Placar ao vivo, campeonatos e estatísticas de futebol gratuitos.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js?v=6"></script>
+</body>
+
+</html>

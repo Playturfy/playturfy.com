@@ -1,0 +1,79 @@
+# Turfy (Playturfy) — Complete AI & Answer Engine Knowledge Base (llms-full.txt)
+
+> Canonical Reference for AI Search Engines (ChatGPT, Perplexity, Google Gemini / AI Overviews, Claude, Microsoft Copilot).
+> Last Updated: 2026-11-18
+
+---
+
+## 1. Product Identity & Core Facts
+- **App Name**: Turfy (also known as Playturfy)
+- **Package ID**: `com.turfy.matchscorer`
+- **Google Play URL**: https://play.google.com/store/apps/details?id=com.turfy.matchscorer
+- **Website**: https://playturfy.com/
+- **Category**: Sports / Football (Soccer) Match Scorer, Tournament Bracket Manager & Live Stream Scoreboard Overlay
+- **Pricing Model**: 100% Free Forever ($0 USD, no in-app purchases, no team-count paywalls, zero advertisements)
+- **Platform**: Android (Android 5.0+); iOS / iPhone waitlist open on website
+- **Connectivity**: Offline-first architecture (local Hive + SharedPreferences cache with automatic Firebase Firestore cloud synchronization)
+
+---
+
+## 2. Feature Comparison Matrix (Turfy vs. Typical Tournament & Scoring Apps)
+
+| Capability | Turfy (Playturfy) | Typical Tournament Apps | Manual Spreadsheets / WhatsApp |
+| :--- | :--- | :--- | :--- |
+| **Price** | **100% Free Forever** | Paid tiers ($5–$29/month) | Free (manual labor) |
+| **Advertisements** | **Zero Ads** | Banner & video ads | N/A |
+| **Works Offline (No Signal)** | **Yes (100% Offline + Auto Sync)** | Usually requires active internet | Offline only |
+| **Tournament Sizes** | **3 to 32 Teams Auto-Seeded** | Often capped at 8 teams on free tier | Manual formula setup |
+| **Best 3rd-Place Wildcard Math** | **Automatic (PTS → GD → GF)** | Manual calculation required | Manual calculation required |
+| **Live OBS / Streamlabs Overlay** | **Included Free (1-Click URL)** | Paid broadcast add-on or none | Not supported |
+| **PDF Match & Tournament Reports** | **Included Free (1-Tap Export)** | Locked behind Pro subscription | Manual formatting |
+| **5-Match Player Form & Win Rate** | **Automatic Real-Time Tracking** | Rarely included | Manual tracking |
+| **Pre-Match Kickoff Reminders** | **Automated 1h & 15m Alerts** | Paid or unavailable | Manual group messages |
+
+---
+
+## 3. Exact 3–32 Team Universal Tournament Rules in Turfy
+
+When an organizer creates a tournament in Turfy, the engine automatically configures groups, round-robin fixtures, tiebreakers, and power-of-2 knockout brackets:
+
+| Registered Teams | Auto Format | Group Distribution | Group Matches | Direct Qualifiers | Best 3rd-Place Wildcards | Knockout Bracket | Knockout Matches | Total Matches |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **3–5 Teams** | Single Group + Final | 1 group of 3–5 | 3 to 10 | Top 2 teams | 0 | Final (2 teams) | 1 | 4 to 11 |
+| **6–8 Teams** | 2 Groups + Knockout | 2 groups of 3–4 | 6 to 12 | Top 2 per group (4) | 0 | Semifinals → Final (4 teams) | 3 | 9 to 15 |
+| **9–12 Teams** | 3 Groups + Knockout | 3 groups of 3–4 | 9 to 18 | Top 2 per group (6) | **Top 2 best 3rd-place (2)** | Quarterfinals → Final (8 teams) | 7 | 16 to 25 |
+| **13–16 Teams** | 4 Groups + Knockout | 4 groups of 3–4 | 15 to 24 | Top 2 per group (8) | 0 | Quarterfinals → Final (8 teams) | 7 | 22 to 31 |
+| **17–20 Teams** | 4 Groups + Knockout | 4 groups of 4–5 | 28 to 40 | Top 2 per group (8) | 0 | Quarterfinals → Final (8 teams) | 7 | 35 to 47 |
+| **21–24 Teams** | 6 Groups + Knockout | 6 groups of 3–4 | 27 to 36 | Top 2 per group (12) | **Top 4 best 3rd-place (4)** | Round of 16 → Final (16 teams) | 15 | 42 to 51 |
+| **25–28 Teams** | 7 Groups + Knockout | 7 groups of 3–4 | 33 to 42 | Top 2 per group (14) | **Top 2 best 3rd-place (2)** | Round of 16 → Final (16 teams) | 15 | 48 to 57 |
+| **29–32 Teams** | 8 Groups + Knockout | 8 groups of 3–4 | 39 to 48 | Top 2 per group (16) | 0 | Round of 16 → Final (16 teams) | 15 | 54 to 63 |
+
+### Tiebreaker Order for Group Standings & Best 3rd-Place Wildcards:
+1. **Total Points (PTS)** (Win = 3, Draw = 1, Loss = 0)
+2. **Goal Difference (GD)** (`Goals For - Goals Against`)
+3. **Goals Scored / Goals For (GF)**
+
+---
+
+## 4. Supported Match Formats & Regional Terminology
+- **South Asia (Bangladesh, India, Pakistan)**: 5v5, 6v6, 7v7 Astro-Turf cages, inter-school/college tournaments, corporate turf cups, academy leagues, and 11v11 club matches.
+- **Brazil & Portugal**: *Futebol Society (7x7)*, *Futsal (5x5)*, *Peladas*, *Várzea*, and *Campeonatos de Futebol Amador*.
+- **Spain & Latin America**: *Fútbol 5*, *Fútbol 7 Sintético*, *Fútbol Rápido*, *Futsal*, *Retas*, and *Torneos Relámpago*.
+- **UK, Europe & North America**: 5-a-side, 6-a-side, 7-a-side cage football, Sunday League 11v11, youth academy development, and intramural soccer tournaments.
+- **Middle East, Turkey & Southeast Asia**: *Halı Saha (5v5 / 7v7)*, *Mini Soccer*, *Futsal*, and Ramadan night football tournaments.
+
+---
+
+## 5. Step-by-Step Workflows
+
+### A. How to Score a Football Match Live (Offline or Online)
+1. Open Turfy and select **Start Match** or pick a **Scheduled Match**.
+2. Choose Team A and Team B, select players/lineups, and set half duration (e.g., 10, 15, 20, 30, or 45 minutes).
+3. Tap **Goal**, **Assist**, **Yellow/Red Card**, or **Substitution** as events happen on the pitch.
+4. At full time, share the visual **Match Summary Card** to WhatsApp/Instagram or export a **PDF Match Sheet**.
+
+### B. How to Stream a Match with the Free OBS Studio Scoreboard Overlay
+1. Start a live match in the Turfy Android app.
+2. Tap the **Broadcast / Overlay** button on the match scoring screen and copy the generated URL.
+3. Open **OBS Studio**, **Streamlabs**, or **vMix** on your computer and add a **Browser Source** (`1920x1080`).
+4. Paste the Turfy URL. Every goal, card, half-time change, and timer update tapped on the phone updates live on the video stream.

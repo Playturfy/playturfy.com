@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Football Tournament &amp; Bracket Generator App (3–32 Teams) | Turfy</title>
+  <meta name="title" content="Free Football Tournament &amp; Bracket Generator App (3–32 Teams) | Turfy">
+  <meta name="description"
+    content="Generate football tournament brackets, group stage fixtures, and live standings tables for 3 to 32 teams automatically. Supports Round Robin, Group + Knockout, best 3rd-place qualification, and PDF export. 100% free &amp; offline.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://playturfy.com/tournament-maker.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://playturfy.com/tournament-maker.html">
+  <meta property="og:title" content="Free Football Tournament &amp; Bracket Generator (3–32 Teams) – Turfy">
+  <meta property="og:description"
+    content="Create Round Robin, Group Stage, and Knockout football tournaments with live tables and automatic wildcard qualification. Free forever, works offline.">
+  <meta property="og:image" content="https://playturfy.com/images/og-share.png">
+
+  <link rel="icon" type="image/svg+xml" href="icons/favicon.svg?v=2">
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+  <link rel="stylesheet" href="css/style.css?v=7">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L299SZQPMC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-L299SZQPMC');
+    function trackDownload(location) {
+      gtag('event', 'download_click', { 'event_category': 'conversion', 'event_label': location, 'value': 1 });
+    }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I organize a 28-team (7 groups) football tournament?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In Turfy, select 28 teams and the app automatically creates 7 groups of 4 teams (42 group matches). When all group matches finish, the top 2 teams from each group (14 teams) plus the 2 best 3rd-place teams based on Points, Goal Difference (GD), and Goals Scored (GF) automatically advance into the 16-team Round of 16 knockout bracket (15 knockout matches, 57 matches total)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the best free football tournament bracket generator app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Turfy is a 100% free football tournament manager and bracket generator app for Android. It supports 3 to 32 teams, automatic Round Robin and Group + Knockout schedules, live standings tables, Golden Boot leaderboards, and one-tap PDF tournament reports with zero ads."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header id="header">
+    <div class="container header-nav">
+      <a href="index.html" class="brand-link" aria-label="Turfy Homepage">
+        <img src="assets/brand-logo.svg" alt="Turfy Logo" class="brand-logo" width="105" height="38">
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#tournament-calculator">Bracket Calculator</a></li>
+          <li><a href="obs-football-overlay.html">OBS Overlay</a></li>
+          <li><a href="turf-match-scorer.html">Turf Scorer</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website%26utm_medium=tm_header"
+          target="_blank" rel="noopener noreferrer" onclick="trackDownload('tm_header')" class="btn btn-lime btn-sm">
+          Download Free
+        </a>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+      <ul class="mobile-drawer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#tournament-calculator">Bracket Calculator</a></li>
+        <li><a href="obs-football-overlay.html">OBS Overlay</a></li>
+        <li><a href="turf-match-scorer.html">Turf Scorer</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="section-tag">3 to 32 Team Tournament Engine</span>
+          <h1 class="hero-title">
+            Free Football Tournament &amp; <span class="lime">Bracket Generator.</span>
+          </h1>
+          <p class="hero-desc">
+            Run 3 to 32 team football and futsal tournaments without spreadsheets. Turfy generates Round Robin groups,
+            calculates live standings (PTS, GD, GF), and seeds knockout brackets automatically—even offline.
+          </p>
+          <div class="hero-format-pills">
+            <span class="format-pill"><span class="dot"></span> 3–32 Teams Auto-Seeded</span>
+            <span class="format-pill"><span class="dot"></span> Best 3rd-Place Wildcards</span>
+            <span class="format-pill"><span class="dot"></span> Instant PDF Brackets</span>
+          </div>
+          <div class="hero-ctas">
+            <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website%26utm_medium=tm_hero"
+              target="_blank" rel="noopener noreferrer" onclick="trackDownload('tm_hero')" class="btn btn-lime btn-lg">
+              Create Your Tournament Free →
+            </a>
+          </div>
+        </div>
+        <div class="phone-mockup">
+          <div class="phone-frame">
+            <picture style="display: contents;">
+              <source type="image/avif" srcset="assets/optimized/feature-tournaments.avif">
+              <source type="image/webp" srcset="assets/optimized/feature-tournaments.webp">
+              <img src="assets/optimized/feature-tournaments.png" alt="Turfy Football Tournament Bracket Generator"
+                class="phone-screen" width="310" height="656">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="calc-section" id="tournament-calculator">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Interactive Calculator</span>
+          <h2 class="section-title">Preview Any 3–32 Team Tournament Format</h2>
+          <p class="section-desc">Select your number of teams to see the exact groups, wildcard qualification rules, and
+            knockout matches.</p>
+        </div>
+
+        <div class="calc-card">
+          <div class="calc-controls">
+            <div class="calc-top-row">
+              <div class="calc-team-display">
+                <span class="calc-team-num" id="calc-team-num">28</span>
+                <span class="calc-team-label">Teams Registered</span>
+              </div>
+              <div class="calc-presets">
+                <button type="button" class="calc-preset-btn" data-teams="8">8 Teams</button>
+                <button type="button" class="calc-preset-btn" data-teams="12">12 Teams</button>
+                <button type="button" class="calc-preset-btn" data-teams="16">16 Teams</button>
+                <button type="button" class="calc-preset-btn" data-teams="20">20 Teams</button>
+                <button type="button" class="calc-preset-btn" data-teams="24">24 Teams</button>
+                <button type="button" class="calc-preset-btn active" data-teams="28">28 Teams</button>
+                <button type="button" class="calc-preset-btn" data-teams="32">32 Teams</button>
+              </div>
+            </div>
+            <input type="range" id="calc-team-slider" class="calc-slider" min="3" max="32" value="28"
+              aria-label="Number of teams">
+          </div>
+
+          <div class="calc-results-grid">
+            <div class="calc-stat-box">
+              <div class="calc-stat-label">Auto Format</div>
+              <div class="calc-stat-value" id="calc-format-val">7 Groups + Knockout</div>
+              <div class="calc-stat-sub" id="calc-format-sub">16-team knockout bracket</div>
+            </div>
+            <div class="calc-stat-box">
+              <div class="calc-stat-label">Group Stage</div>
+              <div class="calc-stat-value" id="calc-group-val">42 Matches</div>
+              <div class="calc-stat-sub" id="calc-group-sub">7 groups of 4 teams</div>
+            </div>
+            <div class="calc-stat-box">
+              <div class="calc-stat-label">Knockout Stage</div>
+              <div class="calc-stat-value" id="calc-knockout-val">15 Matches</div>
+              <div class="calc-stat-sub" id="calc-knockout-sub">R16 (8) → QF (4) → SF (2) → Final (1)</div>
+            </div>
+            <div class="calc-stat-box">
+              <div class="calc-stat-label">Total Tournament</div>
+              <div class="calc-stat-value lime" id="calc-total-val">57 Matches</div>
+              <div class="calc-stat-sub" id="calc-total-sub">42 group + 15 knockout</div>
+            </div>
+          </div>
+
+          <div class="calc-flow-banner">
+            <div class="calc-flow-text">
+              <div class="calc-flow-title" id="calc-rule-title">How 28-Team Qualification Works (7 Groups → 16-Team
+                Knockout):</div>
+              <p class="calc-flow-desc" id="calc-rule-desc">Top 2 from each of the 7 groups qualify directly (14 teams).
+                From the remaining teams, Turfy compares all 3rd-place teams by Points, Goal Difference (GD), and Goals
+                Scored (GF) and picks the Top 2 best 3rd-place teams (14 + 2 = 16 knockout teams).</p>
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website%26utm_medium=tm_calc"
+              target="_blank" rel="noopener noreferrer" onclick="trackDownload('tm_calc')" class="btn btn-lime btn-sm">
+              Download Turfy Free →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 Playturfy. <a href="index.html" class="lime">Back to Homepage</a></div>
+        <div><a href="obs-football-overlay.html">OBS Scoreboard Overlay</a> · <a href="turf-match-scorer.html">Turf
+            Match Scorer</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js?v=6"></script>
+</body>
+
+</html>

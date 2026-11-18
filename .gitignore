@@ -1,6 +1,7 @@
 # Test and scratch artifacts
 scratch/
 .vscode/
+app screen shots/
 
 # OS files
 .DS_Store

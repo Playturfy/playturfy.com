@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Live Football Scoreboard Overlay for OBS Studio &amp; Streamlabs | Turfy</title>
+  <meta name="title" content="Free Live Football Scoreboard Overlay for OBS Studio &amp; Streamlabs | Turfy">
+  <meta name="description"
+    content="Add a professional real-time football scoreboard overlay to OBS Studio, Streamlabs, or vMix for free. Control live scores, match timer, and cards directly from your Android phone.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://playturfy.com/obs-football-overlay.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://playturfy.com/obs-football-overlay.html">
+  <meta property="og:title" content="Free Live Football Scoreboard Overlay for OBS &amp; Streamlabs – Turfy">
+  <meta property="og:description"
+    content="Control your live stream football scoreboard from your phone. Paste one Browser Source link into OBS Studio and stream like the pros.">
+  <meta property="og:image" content="https://playturfy.com/images/og-share.png">
+
+  <link rel="icon" type="image/svg+xml" href="icons/favicon.svg?v=2">
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+  <link rel="stylesheet" href="css/style.css?v=7">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L299SZQPMC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-L299SZQPMC');
+    function trackDownload(location) {
+      gtag('event', 'download_click', { 'event_category': 'conversion', 'event_label': location, 'value': 1 });
+    }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Add a Live Football Scoreboard Overlay to OBS Studio from Your Phone",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Start a Live Match in Turfy",
+        "text": "Open the free Turfy app on your Android phone, select your two teams, and start the match."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Copy the Broadcast Overlay URL",
+        "text": "Tap the Broadcast icon on the live scoring screen to generate your unique Browser Source URL."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Add Browser Source in OBS Studio or Streamlabs",
+        "text": "In OBS Studio, add a new Browser Source, paste the Turfy overlay URL, set resolution to 1920x1080, and your scoreboard updates in real time as you score on your phone."
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header id="header">
+    <div class="container header-nav">
+      <a href="index.html" class="brand-link" aria-label="Turfy Homepage">
+        <img src="assets/brand-logo.svg" alt="Turfy Logo" class="brand-logo" width="105" height="38">
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tournament-maker.html">Tournament Maker</a></li>
+          <li><a href="turf-match-scorer.html">Turf Scorer</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website%26utm_medium=obs_header"
+          target="_blank" rel="noopener noreferrer" onclick="trackDownload('obs_header')" class="btn btn-lime btn-sm">
+          Download Free
+        </a>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+      <ul class="mobile-drawer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tournament-maker.html">Tournament Maker</a></li>
+        <li><a href="turf-match-scorer.html">Turf Scorer</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="section-tag">OBS Studio · Streamlabs · vMix</span>
+          <h1 class="hero-title">
+            Free Live Football <span class="lime">OBS Scoreboard Overlay.</span>
+          </h1>
+          <p class="hero-desc">
+            Streaming local turf finals, academy games, or community tournaments on YouTube, Facebook, or Twitch?
+            Control a broadcast-grade TV scoreboard overlay in real time straight from your phone.
+          </p>
+          <div class="hero-format-pills">
+            <span class="format-pill"><span class="dot"></span> 1-Click Browser Source URL</span>
+            <span class="format-pill"><span class="dot"></span> Real-Time Timer &amp; Goals</span>
+            <span class="format-pill"><span class="dot"></span> 100% Free Forever</span>
+          </div>
+          <div class="hero-ctas">
+            <a href="https://play.google.com/store/apps/details?id=com.turfy.matchscorer&amp;referrer=utm_source=website%26utm_medium=obs_hero"
+              target="_blank" rel="noopener noreferrer" onclick="trackDownload('obs_hero')" class="btn btn-lime btn-lg">
+              Get Free OBS Scoreboard App →
+            </a>
+          </div>
+        </div>
+        <div class="phone-mockup">
+          <div class="phone-frame">
+            <picture style="display: contents;">
+              <source type="image/avif" srcset="assets/optimized/feature-scoring.avif">
+              <source type="image/webp" srcset="assets/optimized/feature-scoring.webp">
+              <img src="assets/optimized/feature-scoring.png" alt="Turfy Live OBS Football Scoreboard Controller"
+                class="phone-screen" width="310" height="656">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">3-Step Broadcast Setup</span>
+          <h2 class="section-title">How to Stream Matches with Turfy &amp; OBS</h2>
+          <p class="section-desc">No expensive hardware or desktop operator required.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <h3 class="step-title">Start Match on Phone</h3>
+            <p class="step-desc">Launch Turfy on Android, pick your two teams, and start the live match clock pitch-side.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <h3 class="step-title">Copy Overlay Link</h3>
+            <p class="step-desc">Tap the Broadcast button inside the match screen to copy your live scoreboard Browser Source URL.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <h3 class="step-title">Paste into OBS</h3>
+            <p class="step-desc">Add a Browser Source in OBS Studio or Streamlabs. Every goal, half-time, and timer update syncs live!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 Playturfy. <a href="index.html" class="lime">Back to Homepage</a></div>
+        <div><a href="tournament-maker.html">Tournament Bracket Maker</a> · <a href="turf-match-scorer.html">Turf Match
+            Scorer</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js?v=6"></script>
+</body>
+
+</html>
