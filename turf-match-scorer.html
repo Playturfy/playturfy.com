@@ -32,17 +32,24 @@
       gtag('event', 'download_click', { 'event_category': 'conversion', 'event_label': location, 'value': 1 });
     }
   </script>
+  <script>
+    // Clean URL: strip index.html from address bar for a sleek, clean address
+    if (window.location.protocol !== 'file:' && window.location.pathname.endsWith('/index.html')) {
+      var clean = window.location.pathname.replace(/\/index\.html$/, '/') + window.location.search + window.location.hash;
+      window.history.replaceState(null, '', clean);
+    }
+  </script>
 </head>
 
 <body>
   <header id="header">
     <div class="container header-nav">
-      <a href="index.html" class="brand-link" aria-label="Turfy Homepage">
+      <a href="./" class="brand-link" aria-label="Turfy Homepage">
         <img src="assets/brand-logo.svg" alt="Turfy Logo" class="brand-logo" width="105" height="38">
       </a>
       <nav aria-label="Main navigation">
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="./">Home</a></li>
           <li><a href="tournament-maker.html">Tournament Maker</a></li>
           <li><a href="obs-football-overlay.html">OBS Overlay</a></li>
         </ul>
@@ -60,7 +67,7 @@
 
     <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
       <ul class="mobile-drawer-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="./">Home</a></li>
         <li><a href="tournament-maker.html">Tournament Maker</a></li>
         <li><a href="obs-football-overlay.html">OBS Overlay</a></li>
       </ul>
@@ -110,7 +117,7 @@
   <footer>
     <div class="container">
       <div class="footer-bottom">
-        <div>&copy; 2026 Playturfy. <a href="index.html" class="lime">Back to Homepage</a></div>
+        <div>&copy; 2026 Playturfy. <a href="./" class="lime">Back to Homepage</a></div>
         <div><a href="tournament-maker.html">Tournament Bracket Maker</a> · <a href="obs-football-overlay.html">OBS
             Scoreboard Overlay</a></div>
       </div>
