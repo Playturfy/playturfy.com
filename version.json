@@ -1,11 +1,11 @@
 {
-  "version": "1.6.3",
+  "version": "1.6.4",
   "forceUpdate": false,
   "updateUrl": "https://play.google.com/store/apps/details?id=com.turfy.matchscorer",
   "releaseNotes": [
-    "High-performance image assets and faster asset delivery",
-    "Live match scoring enhancements and instant undo",
-    "Automated tournament tables and bracket updates",
-    "Offline sync and UI performance improvements"
+    "Fixed tournament creation stability in release builds",
+    "Enhanced error message clarity with user-friendly alerts",
+    "Optimized tournament notification delivery without duplicate alerts",
+    "Performance and stability improvements across match scoring"
   ]
 }
