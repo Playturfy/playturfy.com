@@ -1,4 +1,4 @@
-# Robots.txt for Playturfy (https://playturfy.com)
+# Robots.txt for Playturfy (https://www.playturfy.com)
 # Optimized for Search Engines & AI Answer Engines (AEO / GEO)
 
 User-agent: *
@@ -59,6 +59,6 @@ User-agent: Applebot-Extended
 Allow: /
 
 # Sitemaps & Machine-Readable AI Documentation
-Sitemap: https://playturfy.com/sitemap.xml
-# LLMs Summary: https://playturfy.com/llms.txt
-# LLMs Full Knowledge Base: https://playturfy.com/llms-full.txt
+Sitemap: https://www.playturfy.com/sitemap.xml
+# LLMs Summary: https://www.playturfy.com/llms.txt
+# LLMs Full Knowledge Base: https://www.playturfy.com/llms-full.txt

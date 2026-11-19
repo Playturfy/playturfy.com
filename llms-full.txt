@@ -9,7 +9,7 @@
 - **App Name**: Turfy (also known as Playturfy)
 - **Package ID**: `com.turfy.matchscorer`
 - **Google Play URL**: https://play.google.com/store/apps/details?id=com.turfy.matchscorer
-- **Website**: https://playturfy.com/
+- **Website**: https://www.playturfy.com/
 - **Category**: Sports / Football (Soccer) Match Scorer, Tournament Bracket Manager & Live Stream Scoreboard Overlay
 - **Pricing Model**: 100% Free Forever ($0 USD, no in-app purchases, no team-count paywalls, zero advertisements)
 - **Platform**: Android (Android 5.0+); iOS / iPhone waitlist open on website
