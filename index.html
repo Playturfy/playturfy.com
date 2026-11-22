@@ -52,15 +52,23 @@
   <link rel="manifest" href="manifest.json?v=3">
   <meta name="theme-color" content="#C6F432">
 
-  <!-- Fonts: Plus Jakarta Sans + Manrope -->
+  <!-- Fonts: Plus Jakarta Sans + Manrope (non-render-blocking for fast LCP) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet">
+  </noscript>
+
+  <!-- Preload hero LCP image -->
+  <link rel="preload" as="image" href="assets/optimized/hero-phone.webp" type="image/webp" fetchpriority="high">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=14">
+  <link rel="stylesheet" href="css/style.css?v=15">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-L299SZQPMC"></script>
@@ -433,7 +441,7 @@
               <source type="image/avif" srcset="assets/optimized/hero-phone.avif">
               <source type="image/webp" srcset="assets/optimized/hero-phone.webp">
               <img src="assets/optimized/hero-phone.png" alt="Turfy Match Tracker Interface" class="phone-screen"
-                width="310" height="656" loading="eager">
+                width="310" height="656" loading="eager" fetchpriority="high" decoding="async">
             </picture>
           </div>
         </div>
@@ -1237,7 +1245,7 @@
     </div>
   </div>
 
-  <script src="js/script.js?v=14"></script>
+  <script src="js/script.js?v=14" defer></script>
 </body>
 
 </html>
