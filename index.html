@@ -4,6 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Critical stylesheet & font preconnects first for fastest mobile FCP/LCP -->
+  <link rel="stylesheet" href="css/style.css?v=15">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet">
+  </noscript>
+  <link rel="preload" as="image" href="assets/optimized/hero-phone.webp" type="image/webp" media="(min-width: 900px)" fetchpriority="high">
+
   <meta name="google-site-verification" content="p67bcS6EVbdcZkb-eozOIBRy7tOoKOfhjDLpfr3O5Sw">
   <meta name="msvalidate.01" content="95870A03AD79F463F5D952636E8D0CC7">
 
@@ -52,26 +67,7 @@
   <link rel="manifest" href="manifest.json?v=3">
   <meta name="theme-color" content="#C6F432">
 
-  <!-- Fonts: Plus Jakarta Sans + Manrope (non-render-blocking for fast LCP) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
-    rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
-      rel="stylesheet">
-  </noscript>
-
-  <!-- Preload hero LCP image -->
-  <link rel="preload" as="image" href="assets/optimized/hero-phone.webp" type="image/webp" fetchpriority="high">
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=15">
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L299SZQPMC"></script>
+  <!-- Google Analytics (deferred until after window load to protect mobile LCP) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -85,6 +81,13 @@
         'value': 1
       });
     }
+
+    window.addEventListener('load', function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-L299SZQPMC';
+      document.head.appendChild(s);
+    });
   </script>
 
   <!-- Structured Data: Mobile Application -->
