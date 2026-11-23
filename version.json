@@ -1,11 +1,11 @@
 {
-  "version": "1.6.4",
+  "version": "1.6.5",
   "forceUpdate": false,
   "updateUrl": "https://play.google.com/store/apps/details?id=com.turfy.matchscorer",
   "releaseNotes": [
-    "Fixed tournament creation stability in release builds",
-    "Enhanced error message clarity with user-friendly alerts",
-    "Optimized tournament notification delivery without duplicate alerts",
-    "Performance and stability improvements across match scoring"
+    "Redesigned Team Stats & Shareable Player Stats Card",
+    "Fixed Rematch button to keep exact squads and team details",
+    "Improved tournament multi-admin match locking, standings & reminders",
+    "Faster stats loading, cleaner notifications, and stability fixes"
   ]
 }
