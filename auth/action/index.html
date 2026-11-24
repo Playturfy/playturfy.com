@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="referrer" content="no-referrer" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; script-src 'unsafe-inline' https://www.gstatic.com; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://identitytoolkit.googleapis.com https://securetoken.googleapis.com; base-uri 'none'; form-action 'self';"
+  />
+  <title>Reset Password — Turfy</title>
+  <link rel="icon" href="/assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0b0d0b;
+      --card: #131613;
+      --surface: #181c18;
+      --border: #242a24;
+      --lime: #c5f82a;
+      --lime-dim: rgba(197, 248, 42, 0.14);
+      --text: #ffffff;
+      --muted: #8c948c;
+      --danger: #ef5350;
+      --danger-dim: rgba(239, 83, 80, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(600px circle at 85% -10%, rgba(197, 248, 42, 0.10), transparent 60%),
+        var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 24px;
+      text-decoration: none;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+    }
+
+    .eyebrow {
+      color: var(--lime);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.45;
+      margin-bottom: 22px;
+    }
+
+    .email-pill {
+      display: inline-block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: #e6ece6;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      word-break: break-all;
+    }
+
+    .field {
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #e6ece6;
+      margin-bottom: 7px;
+    }
+
+    .input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    input[type="password"],
+    input[type="text"] {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 13px 64px 13px 14px;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 14.5px;
+      font-weight: 600;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+
+    input:focus {
+      border-color: var(--lime);
+    }
+
+    .toggle-btn {
+      position: absolute;
+      right: 10px;
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 6px 8px;
+    }
+
+    .toggle-btn:hover {
+      color: var(--text);
+    }
+
+    .alert {
+      display: none;
+      padding: 11px 13px;
+      border-radius: 11px;
+      font-size: 12.5px;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+
+    .alert.error {
+      display: block;
+      background: var(--danger-dim);
+      border: 1px solid rgba(239, 83, 80, 0.35);
+      color: var(--danger);
+    }
+
+    .alert.success {
+      display: block;
+      background: var(--lime-dim);
+      border: 1px solid rgba(197, 248, 42, 0.35);
+      color: var(--lime);
+    }
+
+    .btn {
+      width: 100%;
+      height: 48px;
+      border: none;
+      border-radius: 12px;
+      background: var(--lime);
+      color: #0b0d0b;
+      font-family: inherit;
+      font-size: 14.5px;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: opacity 0.15s ease, transform 0.1s ease;
+    }
+
+    .btn:hover {
+      opacity: 0.94;
+    }
+
+    .btn:active {
+      transform: scale(0.99);
+    }
+
+    .btn:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+
+    .spinner {
+      width: 24px;
+      height: 24px;
+      border: 2.5px solid var(--border);
+      border-top-color: var(--lime);
+      border-radius: 50%;
+      animation: spin 0.75s linear infinite;
+      margin: 24px auto;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #5f685f;
+      text-align: center;
+    }
+
+    .footer a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <a class="brand" href="https://www.playturfy.com" aria-label="Turfy">
+    <svg width="136" height="44" viewBox="24 68 155 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="44.8,76.6 53.0,76.6 34.6,116.6 26.4,116.6" fill="#C5F82A"/>
+      <polygon points="58.6,70.3 66.8,70.3 48.4,110.3 40.2,110.3" fill="#C5F82A"/>
+      <polygon points="66.9,75.8 75.1,75.8 56.7,115.8 48.5,115.8" fill="#C5F82A"/>
+      <text x="79" y="112" fill="#FFFFFF" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="38" letter-spacing="-1.5">turfy</text>
+      <rect x="170" y="106" width="6.5" height="6.5" rx="1.4" fill="#C5F82A"/>
+    </svg>
+  </a>
+
+  <main class="card">
+    <!-- Loading State -->
+    <section id="loading-view">
+      <div class="eyebrow">Account Security</div>
+      <h1>Verifying your link...</h1>
+      <p class="subtitle">Please wait a moment while we confirm your request.</p>
+      <div class="spinner" aria-label="Loading"></div>
+    </section>
+
+    <!-- Reset Password Form -->
+    <section id="reset-view" class="hidden">
+      <div class="eyebrow">Account Recovery</div>
+      <h1>Set a new password</h1>
+      <p class="subtitle">Choose a new password for your Turfy account.</p>
+      <div id="reset-email" class="email-pill"></div>
+
+      <div id="form-error" class="alert"></div>
+
+      <form id="reset-form" novalidate>
+        <div class="field">
+          <label for="new-password">New password</label>
+          <div class="input-wrap">
+            <input
+              id="new-password"
+              type="password"
+              autocomplete="new-password"
+              placeholder="At least 6 characters"
+              minlength="6"
+              required
+            />
+            <button type="button" class="toggle-btn" data-target="new-password">Show</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="confirm-password">Confirm password</label>
+          <div class="input-wrap">
+            <input
+              id="confirm-password"
+              type="password"
+              autocomplete="new-password"
+              placeholder="Re-enter your new password"
+              minlength="6"
+              required
+            />
+            <button type="button" class="toggle-btn" data-target="confirm-password">Show</button>
+          </div>
+        </div>
+
+        <button id="submit-btn" type="submit" class="btn">Save new password</button>
+      </form>
+    </section>
+
+    <!-- Success State -->
+    <section id="success-view" class="hidden">
+      <div class="eyebrow">All Set</div>
+      <h1 id="success-title">Password updated</h1>
+      <p id="success-body" class="subtitle">Your password has been changed. You can now sign in to Turfy with your new password.</p>
+      <a href="https://www.playturfy.com/app" class="btn">Open Turfy App</a>
+    </section>
+
+    <!-- Error State -->
+    <section id="error-view" class="hidden">
+      <div class="eyebrow" style="color: var(--danger);">Link Expired</div>
+      <h1>This link is no longer valid</h1>
+      <p id="error-body" class="subtitle">Reset links expire after use or after a short time. Open the Turfy app and tap "Forgot password?" to request a fresh link.</p>
+      <a href="https://www.playturfy.com/app" class="btn">Open Turfy App</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    &copy; Turfy &middot; <a href="https://www.playturfy.com">playturfy.com</a>
+  </footer>
+
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js';
+    import {
+      getAuth,
+      verifyPasswordResetCode,
+      confirmPasswordReset,
+      applyActionCode,
+    } from 'https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js';
+
+    const firebaseConfig = {
+      apiKey: 'AIzaSyBQ3kwb41ub3qRsYHFRsS3aki4Dm7mo5DM',
+      authDomain: 'football-45d72.firebaseapp.com',
+      projectId: 'football-45d72',
+      appId: '1:578588250558:web:9af99d7d48b18ea0c429ef',
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    const params = new URLSearchParams(window.location.search);
+    const mode = params.get('mode');
+    const oobCode = params.get('oobCode');
+
+    // Immediately scrub single-use token from URL bar & browser history
+    if (window.location.search) {
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+
+    const loadingView = document.getElementById('loading-view');
+    const resetView = document.getElementById('reset-view');
+    const successView = document.getElementById('success-view');
+    const errorView = document.getElementById('error-view');
+    const formError = document.getElementById('form-error');
+
+    function showOnly(view) {
+      [loadingView, resetView, successView, errorView].forEach((v) =>
+        v.classList.add('hidden')
+      );
+      view.classList.remove('hidden');
+    }
+
+    function showError(msg) {
+      document.getElementById('error-body').textContent = msg;
+      showOnly(errorView);
+    }
+
+    document.querySelectorAll('.toggle-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const input = document.getElementById(btn.dataset.target);
+        const hidden = input.type === 'password';
+        input.type = hidden ? 'text' : 'password';
+        btn.textContent = hidden ? 'Hide' : 'Show';
+      });
+    });
+
+    async function init() {
+      if (!oobCode || !mode) {
+        showError('Missing or invalid action code. Please open the link directly from your email.');
+        return;
+      }
+
+      try {
+        if (mode === 'resetPassword') {
+          const email = await verifyPasswordResetCode(auth, oobCode);
+          document.getElementById('reset-email').textContent = email;
+          showOnly(resetView);
+        } else if (mode === 'verifyEmail') {
+          await applyActionCode(auth, oobCode);
+          document.getElementById('success-title').textContent = 'Email verified';
+          document.getElementById('success-body').textContent =
+            'Your email address has been verified. You can return to the Turfy app now.';
+          showOnly(successView);
+        } else if (mode === 'recoverEmail') {
+          await applyActionCode(auth, oobCode);
+          document.getElementById('success-title').textContent = 'Email restored';
+          document.getElementById('success-body').textContent =
+            'Your email address has been restored. We recommend resetting your password as well.';
+          showOnly(successView);
+        } else {
+          showError('Unsupported action link. Please request a new link from the Turfy app.');
+        }
+      } catch (_) {
+        showError(
+          'This link has expired or was already used. Open the Turfy app and tap "Forgot password?" to request a new one.'
+        );
+      }
+    }
+
+    document.getElementById('reset-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      formError.className = 'alert';
+      formError.textContent = '';
+
+      const pw = document.getElementById('new-password').value;
+      const confirmPw = document.getElementById('confirm-password').value;
+
+      if (pw.length < 6 || pw.trim().length < 6) {
+        formError.className = 'alert error';
+        formError.textContent = 'Password must be at least 6 non-space characters.';
+        return;
+      }
+      if (pw !== confirmPw) {
+        formError.className = 'alert error';
+        formError.textContent = 'Passwords do not match.';
+        return;
+      }
+
+      const btn = document.getElementById('submit-btn');
+      btn.disabled = true;
+      btn.textContent = 'Saving...';
+
+      try {
+        await confirmPasswordReset(auth, oobCode, pw);
+        showOnly(successView);
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = 'Save new password';
+        formError.className = 'alert error';
+        formError.textContent =
+          err?.code === 'auth/weak-password'
+            ? 'Password is too weak. Try a longer password.'
+            : 'This link has expired. Please request a new reset link from the Turfy app.';
+      }
+    });
+
+    init();
+  </script>
+</body>
+</html>
