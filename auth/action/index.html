@@ -448,7 +448,7 @@
         btn.textContent = 'Save new password';
         formError.className = 'alert error';
         formError.textContent =
-          err?.code === 'auth/weak-password'
+          err && err.code === 'auth/weak-password'
             ? 'Password is too weak. Try a longer password.'
             : 'This link has expired. Please request a new reset link from the Turfy app.';
       }
